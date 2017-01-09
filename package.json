@@ -1,0 +1,21 @@
+{
+  "name": "tilecard",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "example": "example",
+    "bin": "lib/distribution/tilecard.js"
+  },
+  "scripts": {
+    "preinstall": "rm -rf node_modules && cd ./lib && rm -rf node_modules && cd ./../example && rm -rf node_modules",
+    "postinstall": "cd ./lib && npm install && cd ./../example && npm install",
+    "test:source": "ava lib/test/index.js",
+    "build:source": "cd ./lib && npm run build",
+    "build:example": "cd ./example && npm run build",
+    "dev:example": "cd ./example && npm run dev",
+    "link": "npm link && cd ./example && npm run link:tilecard"
+
+  },
+  "author": "Kayla Fitzsimmons <kayla.fitzsimmons@protonmail.com>",
+  "license": "MIT"
+}
