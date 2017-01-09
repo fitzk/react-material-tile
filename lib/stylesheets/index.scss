@@ -1,0 +1,64 @@
+.grid {
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-wrap: wrap-reverse;
+	animation-duration: 1s;
+	transition-timing-function: ease-in-out;
+	justify-content: center !important;
+	word-wrap: break-word;
+	word-break: break-all;
+	& .tile {
+		margin: 1px;
+	}
+}
+
+@mixin card($width, $margin-bottom, $flex-direction, $flex-wrap, $font-size, $border) {
+
+    h3 {
+        font-size: $font-size;
+    }
+    .outer-card {
+        align-self: center;
+        display: flex;
+        width: $width;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        font-size: $font-size;
+        background-color: transparent !important;
+    }
+
+    .outer-card-header {
+        background-color: transparent !important;
+        font-family: Roboto, sans-serif;
+        font-weight: 200;
+        align-self: center;
+    }
+
+    .card {
+        transition-timing-function: ease-in-out;
+        transition: height linear 3.5s !important;
+        flex-grow: 0;
+        flex-shrink: 3;
+        justify-content: center;
+        align-self: center;
+        min-width: 75vw !important;
+        margin: auto;
+        margin-bottom: 200px;
+    }
+    p {
+        font-size: $font-size !important;
+    }
+    .header {
+        position: relative;
+        width: 100%;
+        flex-grow: 0;
+        & div span {
+            margin-top: 8px;
+        }
+
+    }
+}
+@include card(90vw,20px,column,flex-wrap,inherit,none);
