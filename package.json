@@ -1,5 +1,5 @@
 {
-  "name": "@fitzk/tilecard",
+  "name": "@fitzk/react-tilecard",
   "version": "1.0.0",
   "description": "A react component that transitions from a custom 'tile' to a materialui Card",
   "directories": {
