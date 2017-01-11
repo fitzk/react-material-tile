@@ -1,14 +1,7 @@
 {
   "name": "@fitzk/react-tilecard",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A react component that transitions from a custom 'tile' to a materialui Card",
-  "directories": {
-    "lib": "lib"
-  },
-  "files": [
-    "./package.json",
-    "./lib"
-  ],
   "author": "Kayla Fitzsimmons <kayla.fitzsimmons@protonmail.com>",
   "license": "MIT",
   "ava": {

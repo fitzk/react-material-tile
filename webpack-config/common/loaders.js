@@ -1,17 +1,7 @@
-/**
-* @Author: Kayla Fitzsimmons <fitzk>
-* @Date:   01-09-2017
-* @Email:  kayla.fitzsimmons@protonmail.com
-* @Project: tilecard
-* @Filename: loaders.js
-* @Last modified by:   fitzk
-* @Last modified time: 01-09-2017
-* @License: MIT
-* @Copyright: 2016-present
-*/
-import { _ExtractTextPlugin } from "./plugins"
+import { _ExtractTextPluginConfig } from "./plugins"
 
 export default ( paths ) => {
+  const _ExtractTextPlugin = _ExtractTextPluginConfig()
   return [
     {
       test: /\.(js|jsx)$/,
@@ -19,6 +9,7 @@ export default ( paths ) => {
         loader: "babel-loader",
         options: {
           babelrc: false,
+          cacheDirectory: true,
           presets: [
             [
               "es2015",
@@ -28,7 +19,7 @@ export default ( paths ) => {
               }
             ],
             "react",
-            "stage-0"
+            "stage-1"
           ],
           plugins: [
             "transform-runtime"
