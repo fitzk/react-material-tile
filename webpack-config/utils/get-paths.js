@@ -12,10 +12,11 @@
 import path from "path"
 
 export default ( dirname ) => ({
-  source: path.resolve( dirname, "source" ),
+  source: path.resolve( dirname, "lib/source" ),
   node_modules: path.resolve( dirname, "node_modules" ),
   stylesheets: path.resolve( dirname, "stylesheets" ),
   distribution: path.resolve( dirname, "distribution" ),
-  tilecard: path.resolve( dirname, "source/tilecard/index.js" ),
+  tilecard: path.resolve( dirname, "lib/source/index.js" ),
   package_json: path.resolve( dirname, "package.json" )
-})
+}
+)

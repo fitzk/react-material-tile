@@ -3,7 +3,9 @@ import getDependencies from "./../utils/get-dependencies"
 import { _ExtractTextPluginConfig, _CleanWebpackPluginConfig } from "./plugins"
 
 export default ( paths ) => {
-  const exclude = [ "material-ui" ]
+  const exclude = [
+    "material-ui"
+  ]
   const dependencies = getDependencies( paths.package_json, exclude )
   const loaders = _loaders( paths )
   const _CleanWebpackPlugin = _CleanWebpackPluginConfig( paths.distribution )

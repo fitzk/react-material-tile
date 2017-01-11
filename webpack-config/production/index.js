@@ -19,7 +19,7 @@ export default ( paths ) => ({
       paths.tilecard
     ]
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   plugins: [
     new UglifyJsPlugin( {
       beautify: false,
