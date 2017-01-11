@@ -12,8 +12,6 @@
 import { optimize } from "webpack"
 const UglifyJsPlugin = optimize.UglifyJsPlugin
 
-const sourcemap = _sourcemap( 'eval-source-map' )
-
 export default ( paths ) => ({
   entry: {
     tilecard: [
@@ -21,7 +19,7 @@ export default ( paths ) => ({
       paths.tilecard
     ]
   },
-  devtool: "eval-source-map",
+  devtool: "source-map",
   plugins: [
     new UglifyJsPlugin( {
       beautify: false,

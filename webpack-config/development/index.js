@@ -12,9 +12,6 @@
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
 import DashboardPlugin from 'webpack-dashboard/plugin'
 import { NamedModulesPlugin } from "webpack"
-import _sourcemap from "./../utils/sourcemap"
-
-const sourcemap = _sourcemap( 'eval-source-map' )
 
 export default ( paths ) => ({
   entry: {
@@ -25,7 +22,7 @@ export default ( paths ) => ({
       paths.tilecard
     ]
   },
-  sourcemap,
+  devtool: 'eval-source-map',
   performance: {
     hints: false
   },
