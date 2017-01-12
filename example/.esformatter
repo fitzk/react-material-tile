@@ -2,8 +2,8 @@
   "jsx": {
     "attrsOnSameLineAsTag": false,
     "maxAttrsOnTag": 1,
-    "firstAttributeOnSameLine": true,
-    "alignWithFirstAttribute": true
+    "firstAttributeOnSameLine": false,
+    "alignWithFirstAttribute": false
   },
   "indent": {
     "value": "  ",

@@ -1,5 +1,5 @@
 {
-  "name": "@fitzk/react-tilecard",
+  "name": "react-tilecard",
   "version": "1.0.3",
   "description": "A react component that transitions from a custom 'tile' to a materialui Card",
   "author": "Kayla Fitzsimmons <kayla.fitzsimmons@protonmail.com>",
@@ -45,7 +45,7 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "rollup-loader": "^0.1.1",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^4 r.1.1",
     "webpack": "^2.1.0-beta.25",
     "webpack-dashboard": "^0.2.1",
     "webpack-merge": "^2.3.1",
