@@ -1,3 +1,7 @@
-example/*
+example
 .esformatter
 .git
+.eslintrc
+.gitignore
+lib
+webpack-config
