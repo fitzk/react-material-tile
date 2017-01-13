@@ -9,8 +9,9 @@
     "material-ui": "^0.16.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-hot-loader": "^3.0.0-beta.6",
     "react-tap-event-plugin": "^2.0.1",
-    "react-tilecard": "^1.0.3"
+    "react-tilecard": "0.0.5-beta"
   },
   "devDependencies": {
     "ava": "^0.17.0",
@@ -26,17 +27,17 @@
     "esformatter": "^0.10.0",
     "esformatter-jsx": "^7.4.0",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.26.0",
     "jsx-test-helpers": "^1.1.0",
     "node-sass": "^4.2.0",
     "sass-loader": "^4.1.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.14.0",
+    "webpack": "^2.2.0-rc.4",
     "webpack-dashboard": "^0.2.1",
-    "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^2.3.1"
   },
   "scripts": {
-    "build": "webpack --env production --config ./webpack.config.babel.js",
-    "dev": "webpack-dashboard -- webpack-dev-server --env development --config ./webpack.config.babel.js"
+    "build:example": "./node_modules/.bin/webpack --env production --config ./webpack.config.babel.js",
+    "dev:example": "./node_modules/.bin/webpack-dashboard -- ./node_modules/.bin/webpack-dev-server --env development --config ./webpack.config.babel.js"
   }
 }

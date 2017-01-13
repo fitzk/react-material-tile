@@ -16,6 +16,6 @@ export default ( dirname ) => ({
   node_modules: path.resolve( dirname, "node_modules" ),
   stylesheets: path.resolve( dirname, "stylesheets" ),
   distribution: path.resolve( dirname, "distribution" ),
-  tilecard: path.resolve( dirname, "source/tilecard/index.js" ),
+  entry: path.resolve( dirname, "source/index.js" ),
   package_json: path.resolve( dirname, "package.json" )
 })
