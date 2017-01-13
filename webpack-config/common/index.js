@@ -1,6 +1,6 @@
 import _loaders from "./loaders"
 import getDependencies from "./../utils/get-dependencies"
-import { _ExtractTextPluginConfig, _CleanWebpackPluginConfig } from "./plugins"
+import { _ExtractTextPluginConfig } from "./plugins"
 
 export default (paths) => {
 	const exclude = [
