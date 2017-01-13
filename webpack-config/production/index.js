@@ -1,37 +1,60 @@
-/**
-* @Author: Kayla Fitzsimmons <fitzk>
-* @Date:   01-09-2017
-* @Email:  kayla.fitzsimmons@protonmail.com
-* @Project: tilecard
-* @Filename: production.js
-* @Last modified by:   fitzk
-* @Last modified time: 01-09-2017
-* @License: MIT
-* @Copyright: 2016-present
-*/
-import { optimize } from "webpack"
-const UglifyJsPlugin = optimize.UglifyJsPlugin
+var webpack = require('webpack');
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
-export default ( paths ) => ({
-  entry: {
-    tilecard: [
-      "babel-polyfill",
-      paths.tilecard
-    ]
-  },
-  devtool: "source-map",
-  plugins: [
-    new UglifyJsPlugin( {
-      beautify: false,
-      sourceMap: true,
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true
-      },
-      compress: {
-        screw_ie8: true
-      },
-      comments: false
-    } )
-  ]
+const reactExternal = {
+	root: 'React',
+	commonjs2: 'react',
+	commonjs: 'react',
+	amd: 'react'
+};
+
+const reactDOMExternal = {
+	root: 'ReactDOM',
+	commonjs2: 'react-dom',
+	commonjs: 'react-dom',
+	amd: 'react-dom'
+};
+
+export default (paths) => ({
+
+	entry: {
+		'react-tilecard': './lib/source/index.js',
+	//'Connected': './lib/source/connected/index.js'
+	},
+
+	externals: {
+		'react': reactExternal,
+		'react-dom': reactDOMExternal
+	},
+
+	output: {
+		filename: '[name].js',
+		chunkFilename: '[id].chunk.js',
+		path: 'distribution',
+		publicPath: '/',
+		libraryTarget: 'umd',
+		library: 'ReactTileCard'
+	},
+
+	plugins: [
+	new webpack.DefinePlugin({
+		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+	}),
+	new UglifyJsPlugin({
+		include: /\.min\.js$/,
+		minimize: true,
+		compress: {
+			warnings: false
+		}
+	})
+	],
+	module: {
+		loaders: [
+		{
+			test: /\.js?$/,
+			exclude: /node_modules/,
+			loader: 'babel-loader'
+		}
+		]
+	}
 })
