@@ -1,5 +1,7 @@
 var webpack = require('webpack');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+import _loaders from "./loaders"
+
 
 const reactExternal = {
 	root: 'React',
@@ -15,46 +17,43 @@ const reactDOMExternal = {
 	amd: 'react-dom'
 };
 
-export default (paths) => ({
+export default (paths) => {
+	const loaders = _loaders(paths);
+	return {
 
-	entry: {
-		'react-tilecard': './lib/source/index.js',
-	//'Connected': './lib/source/connected/index.js'
-	},
+		entry: {
+			'react-tilecard': './lib/source/index.js',
+			'react-tilecard.min': './lib/source/index.js'
+		},
 
-	externals: {
-		'react': reactExternal,
-		'react-dom': reactDOMExternal
-	},
+		externals: {
+			'react': reactExternal,
+			'react-dom': reactDOMExternal
+		},
 
-	output: {
-		filename: '[name].js',
-		chunkFilename: '[id].chunk.js',
-		path: 'distribution',
-		publicPath: '/',
-		libraryTarget: 'umd',
-		library: 'ReactTileCard'
-	},
+		output: {
+			filename: '[name].js',
+			chunkFilename: '[id].chunk.js',
+			path: 'distribution',
+			publicPath: '/',
+			libraryTarget: 'umd',
+			library: 'ReactTileCard'
+		},
 
-	plugins: [
-	new webpack.DefinePlugin({
-		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-	}),
-	new UglifyJsPlugin({
-		include: /\.min\.js$/,
-		minimize: true,
-		compress: {
-			warnings: false
+		plugins: [
+			new webpack.DefinePlugin({
+				'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+			}),
+			new UglifyJsPlugin({
+				include: /\.min\.js$/,
+				minimize: true,
+				compress: {
+					warnings: false
+				}
+			})
+		],
+		module: {
+			rules: loaders
 		}
-	})
-	],
-	module: {
-		loaders: [
-		{
-			test: /\.js?$/,
-			exclude: /node_modules/,
-			loader: 'babel-loader'
-		}
-		]
 	}
-})
+}
