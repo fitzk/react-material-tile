@@ -1,5 +1,6 @@
 import merge from 'webpack-merge'
 import getPaths from "./webpack-config/utils/get-paths"
+import { createVariants } from 'parallel-webpack'
 
 import _common from "./webpack-config/common"
 import _production from "./webpack-config/production"

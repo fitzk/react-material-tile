@@ -6,20 +6,20 @@ export default (paths) => {
 				loader: "babel-loader",
 				options: {
 					babelrc: false,
-					cacheDirectory: true,
+					cacheDirectory: false,
 					presets: [
-					[
-					"es2015",
-					{
-						loose: true,
-						modules: false
-					}
-					],
-					"react",
-					"stage-1"
+						[
+							"es2015",
+							{
+								loose: true,
+								modules: false
+							}
+						],
+						"react",
+						"stage-1"
 					],
 					plugins: [
-					"add-module-exports"
+						"add-module-exports"
 					]
 				}
 			},

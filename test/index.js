@@ -13,7 +13,7 @@
 import React from "react"
 import { test } from "ava"
 import { mount, shallow } from "enzyme"
-import { Stateless, Connected } from "./../distribution/react-tilecard.js"
+import { Stateless, Stateful } from "./../distribution/react-tilecard.js"
 import { noop, renderJSX, JSX } from "jsx-test-helpers"
 
 /*
@@ -35,24 +35,16 @@ Stateless Component PropTypes
 */
 
 test('Stateless: exists', t => {
-
-	const wrapper = shallow(<Stateless name="test"
-                                    uniqueKey="test-0"
-                                    expanded={ false }
+	const expanded = false
+	const wrapper = shallow(<Stateless expanded={ expanded }
+                                    title="Example"
+                                    avatarSrc="file.jpg"
                                     initiallyExpanded={ false }
+                                    name="example"
+                                    childContainerClassName="child-container"
+                                    containerClassName="container"
+                                    uniqueKey="example"
                                     onExpandChange={ () => {
-                                                     } }
-                                    avatarSrc={ "pic.png" } />)
-	t.truthy(wrapper)
-})
-test('Connected: exists', t => {
-
-	const wrapper = shallow(<Connected name="test"
-                                    uniqueKey="test-1"
-                                    expanded={ false }
-                                    initiallyExpanded={ false }
-                                    onExpandChange={ () => {
-                                                     } }
-                                    avatarSrc={ "pic.png" } />)
-	t.truthy(wrapper)
+                                                     } } />)
+	t.truthy(wrapper.find(".childContainerClassName"))
 })

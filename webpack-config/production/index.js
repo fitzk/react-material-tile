@@ -11,7 +11,7 @@ export default (paths) => {
 			'react-tilecard': './lib/source/index.js',
 			'react-tilecard.min': './lib/source/index.js'
 		},
-		externals,
+		externals: externals,
 		output: {
 			filename: '[name].js',
 			chunkFilename: '[id].chunk.js',
@@ -24,7 +24,7 @@ export default (paths) => {
 		plugins: [
 			new UglifyJsPlugin({
 				include: /\.min\.js$/,
-				minimize: true,
+				minimize: false,
 				compress: {
 					warnings: false
 				}
