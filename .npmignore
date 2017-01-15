@@ -5,3 +5,5 @@ example
 .gitignore
 lib
 webpack-config
+test
+node_modules
