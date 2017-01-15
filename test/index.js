@@ -46,5 +46,5 @@ test('Stateless: exists', t => {
                                     uniqueKey="example"
                                     onExpandChange={ () => {
                                                      } } />)
-	t.truthy(wrapper.find(".childContainerClassName"))
+	t.truthy(wrapper)
 })
