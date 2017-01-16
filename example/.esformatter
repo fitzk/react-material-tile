@@ -1,0 +1,38 @@
+{
+  "plugins":["esformatter-jsx"],
+  "jsx": {
+    "formatJSX": true,
+    "attrsOnSameLineAsTag": false,
+    "maxAttrsOnTag": 1,
+    "firstAttributeOnSameLine": true,
+    "alignWithFirstAttribute": true,
+    "spaceInJSXExpressionContainers": " "
+    },
+    "indent": {
+      "value": "\t",
+      "FunctionExpression": 1,
+      "ArrayExpression": 1,
+      "ObjectExpression": 1
+    },
+    "lineBreak": {
+      "before": {
+        "FunctionDeclaration": "0",
+        "FunctionDeclarationOpeningBrace": 1,
+        "FunctionDeclarationClosingBrace": 1
+      },
+      "after": {
+        "FunctionDeclaration": ">=1",
+        "FunctionDeclarationOpeningBrace": 1
+      }
+    },
+    "whiteSpace": {
+    "before": {
+      "FunctionExpressionOpeningBrace": 1,
+      "FunctionExpressionClosingBrace": 1
+          },
+    "after": {
+      "FunctionExpressionOpeningBrace": 1,
+      "FunctionExpressionClosingBrace": -1
+    }
+  }
+}
