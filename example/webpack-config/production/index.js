@@ -3,11 +3,12 @@ const UglifyJsPlugin = optimize.UglifyJsPlugin
 
 export default (paths) => ({
 	entry: {
-		main: [
+		example: [
 			"babel-polyfill",
 			paths.entry
 		]
 	},
+	devtool: "eval-source-map",
 	plugins: [
 		new UglifyJsPlugin({
 			beautify: false,
