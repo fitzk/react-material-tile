@@ -1,7 +1,6 @@
 .grid {
 	display: flex;
 	align-self: center;
-	flex-direction: row;
 	flex-grow: 0;
 	flex-wrap: wrap-reverse;
 	animation-duration: 1s;
@@ -14,51 +13,85 @@
 	}
 }
 
-@mixin card($width, $margin-bottom, $flex-direction, $flex-wrap, $font-size, $border) {
+.row {
+		flex-direction: row;
+}
 
-    h3 {
-        font-size: $font-size;
-    }
-    .outer-card {
-        align-self: center;
-        display: flex;
-        width: $width;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        font-size: $font-size;
-        background-color: transparent !important;
+.column {
+	flex-direction: column;
+}
+
+@keyframes fadeIn {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+ }
+
+ @keyframes fadeOut{
+ 		0% {opacity: 1;}
+ 		100% {opacity: 0;}
+  }
+
+ .fadeIn {
+		-webkit-animation-name: fadeIn;
+		animation-name: fadeIn;
+ }
+ .fadeOut {
+	 -webkit-animation-name: fadeOut;
+	 animation-name: fadeOut;
+ }
+ .animated {
+				background-image: url(/css/images/logo.png);
+				background-repeat: no-repeat;
+				background-position: left top;
+				padding-top:95px;
+				margin-bottom:60px;
+				-webkit-animation-duration: 10s;
+				animation-duration: 10s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+		 }
+.card {
+		animation-duration: 1s;
+		transition-timing-function: ease-in-out;
+		transition: height linear 1s !important;
+		flex-grow: 0;
+		flex-shrink: 3;
+		justify-content: center;
+		align-self: center;
+		min-width: 20vw !important;
+		margin: auto;
+		margin-bottom: 200px;
+}
+
+.card-header {
+    position: relative;
+    width: 100%;
+    flex-grow: 0;
+    & div span {
+        margin-top: 8px;
     }
 
-    .outer-card-header {
-        background-color: transparent !important;
-        font-family: Roboto, sans-serif;
-        font-weight: 200;
-        align-self: center;
-    }
+}
 
-    .card {
-        transition-timing-function: ease-in-out;
-        transition: height linear 3.5s !important;
-        flex-grow: 0;
-        flex-shrink: 3;
-        justify-content: center;
-        align-self: center;
-        min-width: 75vw !important;
-        margin: auto;
-        margin-bottom: 200px;
-    }
-    p {
-        font-size: $font-size !important;
-    }
-    .header {
-        position: relative;
-        width: 100%;
-        flex-grow: 0;
-        & div span {
-            margin-top: 8px;
-        }
-
+.tile {
+    animation-duration: 1s;
+    transition-timing-function: ease-in-out;
+    animation-delay: .5s;
+    transition: height linear 5s;
+    flex-shrink: 0;
+		overflow: hidden;
+		margin: 10px;
+    border: black 1px solid !important;
+    order: -5 !important;
+    & div div {
+        padding: 0 !important;
     }
 }
-@include card(90vw,20px,column,flex-wrap,inherit,none);
+
+.tile-header {
+    overflow: hidden;
+    padding: 0 !important;
+    & div {
+        visibility: collapse;
+    }
+}
