@@ -53,7 +53,7 @@
 .card {
 		animation-duration: 1s;
 		transition-timing-function: ease-in-out;
-		transition: height linear 1s !important;
+		transition: all linear 2s !important;
 		flex-grow: 0;
 		flex-shrink: 3;
 		justify-content: center;

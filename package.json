@@ -60,7 +60,8 @@
   "scripts": {
     "symlink": "npm link && cd ./../example && npm link react-tilecard",
     "test": "./node_modules/.bin/ava ./test/index.js",
-    "build": "./node_modules/.bin/webpack --env production --optimize-minimize --config ./webpack.config.babel.js"
+    "build": "./node_modules/.bin/webpack --env production --optimize-minimize --config ./webpack.config.babel.js",
+    "docs": "cp ./example/distribution/* ./docs"
   },
   "dependencies": {
     "material-ui": "^0.16.6",
