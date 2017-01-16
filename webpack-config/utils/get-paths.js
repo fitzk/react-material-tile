@@ -14,9 +14,8 @@ import path from "path"
 export default (dirname) => ({
 	source: path.resolve(dirname, "lib/source"),
 	node_modules: path.resolve(dirname, "node_modules"),
-	stylesheets: path.resolve(dirname, "stylesheets"),
+	stylesheets: path.resolve(dirname, "lib/source/stylesheets"),
 	distribution: path.resolve(dirname, "distribution"),
 	tilecard: path.resolve(dirname, "lib/source/index.js"),
 	package_json: path.resolve(dirname, "package.json")
-}
-)
+})

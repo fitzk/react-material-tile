@@ -1,11 +1,6 @@
 import { _ExtractTextPluginConfig } from "./plugins"
 
-export default (paths) => {
+export default (paths, extractStyles) => {
 	const _ExtractTextPlugin = _ExtractTextPluginConfig()
-	return [
-		{
-			test: /\.(css|scss)$/,
-			use: _ExtractTextPlugin.extract(["css-loader", "sass-loader"])
-		}
-	]
+	return
 }
