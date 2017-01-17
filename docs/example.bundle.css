@@ -1,0 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.my-card {
+  width: 60vw !important; }
+
+img:hover {
+  opacity: .7; }

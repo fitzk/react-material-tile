@@ -4,8 +4,9 @@ import AppContainer from "react-hot-loader";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import logoDos from "./logo2.png";
+import logoDos from "./team.jpeg";
 import TileCard from "react-tilecard"
+import "./index.scss"
 
 
 export class TC2 extends Component {
@@ -27,7 +28,10 @@ export class TC2 extends Component {
                    title="Example 2"
                    subtitle="this is a subtitle"
                    onExpandChange={ this.onExpandChange.bind(this) }
-                   order={ 2 }
+                   className="my-card"
+                   tileWidth="260px"
+                   tileHeight="170px"
+                   avatarWidth="75px"
                    avatarSrc={ logoDos }
                    initiallyExpanded={ true }>
            <p>

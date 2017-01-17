@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { Card, CardText, Paper, CardTitle } from "material-ui";
+import { Card, CardText, Paper, CardTitle, AppBar } from "material-ui";
 import AppContainer from "react-hot-loader";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
@@ -29,23 +29,19 @@ export default class App extends Component {
 		const muiTheme = getMuiTheme(darkBaseTheme);
 		return <div>
            <MuiThemeProvider muiTheme={ muiTheme }>
-             <div style={ { display: "flex", flexDirection: "column", alignItems: "center" } }>
-               <Paper style={ { width: "90vw" } }>
-                 <h2 style={ { padding: '.5em' } }>Tile Card MaterialUI React Component</h2>
-                 <TileCardGrid width="80vw"
-                               direction="row"
-                               wrap="no-wrap">
-                   <TC1/>
-                   <TC2/>
-                   <TC1/>
-                 </TileCardGrid>
-                 <TileCardGrid width="80vw"
-                               direction="row"
-                               wrap="no-wrap">
-                   <TC1/>
-                   <TC2/>
-                   <TC1/>
-                 </TileCardGrid>
+             <div style={ { display: "flex", flexDirection: "column", alignItems: "center", margin: "0!important" } }>
+               <AppBar/>
+               <h2 style={ { padding: '.5em', fontFamily: "Roboto, Sans-serif", alignSelf: "flex-start", margin: "20px" } }>React Tile Card Example</h2>
+               <Paper zDepth={ 0 }
+                      style={ { width: "70vw", padding: "15px", backgroundColor: "white" } }>
+                 <div style={ { display: "flex", flexDirection: "column", alignItems: "flex-start" } }>
+                   <TileCardGrid width="60vw"
+                                 direction="row"
+                                 wrap="no-wrap">
+                     <TC1/>
+                     <TC2/>
+                   </TileCardGrid>
+                 </div>
                </Paper>
              </div>
            </MuiThemeProvider>

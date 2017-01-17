@@ -44,7 +44,7 @@ export default (paths, extractSCSS) => {
 			})
 		},
 		{
-			test: /\.(png|jpg)$/,
+			test: /\.(png|jpg|jpeg)$/,
 			use: ["file-loader"]
 		}
 	]

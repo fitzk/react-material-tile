@@ -13,7 +13,7 @@
     "react-hot-loader": "^3.0.0-beta.4",
     "react-router": "^3.0.1",
     "react-tap-event-plugin": "^2.0.1",
-    "react-tilecard":"0.0.1-beta.2"
+    "react-tilecard":"file:./../distribution/react-tilecard.js"
   },
   "devDependencies": {
     "ava": "^0.17.0",
