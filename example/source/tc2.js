@@ -29,7 +29,7 @@ export class TC2 extends Component {
                    subtitle="this is a subtitle"
                    onExpandChange={ this.onExpandChange.bind(this) }
                    className="my-card"
-                   tileWidth="360px"
+                   tileWidth="370px"
                    tileHeight="270px"
                    avatarWidth="75px"
                    avatarSrc={ logoDos }
