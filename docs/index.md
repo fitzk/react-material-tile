@@ -6,7 +6,7 @@ description: A custom tile that transforms into a Material UI Card on click.
 
 # React Tile Card
 
-![Tile Card Wire Frame](assets/tile-card.png)
+![Tile Card Wire Frame](assets/1-tile-card.png)
 
 ## Organize content by image or logo.
 ![Row](assets/2-tile-row.png)
