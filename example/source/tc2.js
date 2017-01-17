@@ -28,10 +28,12 @@ export class TC2 extends Component {
                    title="Example 2"
                    subtitle="this is a subtitle"
                    onExpandChange={ this.onExpandChange.bind(this) }
-                   className="my-card"
-                   tileWidth="370px"
-                   tileHeight="270px"
-                   avatarWidth="75px"
+                   cardClassName="my-card"
+                   headerClassName="my-header"
+                   tileWidth="550px"
+                   tileHeight={ `${550*.65}px` }
+                   avatarHeight="auto"
+                   avatarWidth="120px"
                    avatarSrc={ logoDos }
                    initiallyExpanded={ true }>
            <p>

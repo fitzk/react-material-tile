@@ -35,10 +35,11 @@ export default class App extends Component {
                <Paper zDepth={ 0 }
                       style={ { width: "70vw", padding: "15px", backgroundColor: "white" } }>
                  <div style={ { display: "flex", flexDirection: "column", alignItems: "flex-start" } }>
-                   <TileCardGrid width="60vw"
-                                 direction="row"
+                   <TileCardGrid direction="column"
                                  wrap="no-wrap">
+                     <h3 style={ { color: "black" } }>Lorem ipsum</h3>
                      <TC1/>
+                     <h3 style={ { color: "black" } }>Lorem ipsum</h3>
                      <TC2/>
                    </TileCardGrid>
                  </div>
