@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import pic from "./team.jpg";
+import pic from "./assets/team.jpg";
 import TileCard from "react-tilecard"
-import "./index.scss"
+import "./assets/index.scss"
 
 export class TC2 extends Component {
 	constructor(props) {

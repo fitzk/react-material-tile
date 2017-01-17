@@ -24,10 +24,6 @@ export default (paths) => {
 			filename: "[name].bundle.js"
 		},
 		resolve: {
-			alias: {
-				source: `${paths.source}`,
-				stylesheets: `${paths.stylesheets}`
-			},
 			extensions: ["*", ".js", ".jsx", ".json", ".css", ".scss", ".png", ".jpg", ".svg"],
 		},
 		plugins: [extractSCSS, _HtmlWebpackPlugin],
