@@ -1,13 +1,7 @@
-import React, { Component, PropTypes } from "react";
-import { Card, CardText, Paper, CardTitle } from "material-ui";
-import AppContainer from "react-hot-loader";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import logoDos from "./team.jpeg";
+import React, { Component } from "react";
+import pic from "./team.jpg";
 import TileCard from "react-tilecard"
 import "./index.scss"
-
 
 export class TC2 extends Component {
 	constructor(props) {
@@ -34,7 +28,7 @@ export class TC2 extends Component {
                    tileHeight={ `${550*.65}px` }
                    avatarHeight="auto"
                    avatarWidth="120px"
-                   avatarSrc={ logoDos }
+                   avatarSrc={ pic }
                    initiallyExpanded={ true }>
            <p>
              On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded

@@ -4,8 +4,7 @@ import AppContainer from "react-hot-loader";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import logo from "./logo.png";
-import logoDos from "./logo2.png";
+
 import TileCard, { TileCardGrid } from "react-tilecard"
 
 import { TC1 } from "./tc1"

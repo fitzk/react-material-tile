@@ -1,10 +1,5 @@
-import React, { Component, PropTypes } from "react";
-import { Card, CardText, Paper, CardTitle } from "material-ui";
-import AppContainer from "react-hot-loader";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import logo from "./collaboration.jpeg";
+import React, { Component } from "react";
+import pic from "./collab.jpg";
 import TileCard from "react-tilecard"
 import "./index.scss"
 
@@ -33,7 +28,7 @@ export class TC1 extends Component {
                    avatarHeight="auto"
                    avatarWidth="120px"
                    onExpandChange={ this.onExpandChange.bind(this) }
-                   avatarSrc={ logo }
+                   avatarSrc={ pic }
                    initiallyExpanded={ true }>
            <p>
              But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and
