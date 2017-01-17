@@ -1,9 +1,15 @@
 html, body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 1.3rem; }
 
 .my-card {
-  width: 60vw !important; }
+  width: 60vw !important;
+  padding: 10px !important; }
+  .my-card * {
+    font-size: 1.3rem; }
+  .my-card .my-header div span {
+    font-size: 1.5rem !important; }
 
 img:hover {
   opacity: .7; }
