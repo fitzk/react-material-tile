@@ -27,8 +27,8 @@ export class TC1 extends Component {
                    title="Example"
                    subtitle="a subtitle"
                    cardClassName="my-card"
-                   tileWidth="260px"
-                   tileHeight="170px"
+                   tileWidth="360px"
+                   tileHeight="270px"
                    avatarWidth="75px"
                    onExpandChange={ this.onExpandChange.bind(this) }
                    avatarSrc={ logo }
