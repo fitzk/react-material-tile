@@ -1,4 +1,4 @@
 ---
 ---
 
-[example]("./example/index.html")
+[example]("example/index.html")
