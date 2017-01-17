@@ -1,4 +1,4 @@
 ---
 ---
 
-[example]("https://fitzk.github.io/react-tilecard/example/")
+[example](https://fitzk.github.io/react-tilecard/example)
