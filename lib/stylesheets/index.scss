@@ -3,11 +3,8 @@
 	align-self: center;
 	flex-grow: 0;
 	flex-wrap: wrap-reverse;
-	animation-duration: 1s;
-	transition-timing-function: ease-in-out;
 	justify-content: center !important;
 	word-wrap: break-word;
-	word-break: break-all;
 	& .tile {
 		margin: 1px;
 	}
@@ -39,21 +36,16 @@
 	 -webkit-animation-name: fadeOut;
 	 animation-name: fadeOut;
  }
- .animated {
-				background-image: url(/css/images/logo.png);
-				background-repeat: no-repeat;
-				background-position: left top;
+ .animated:active {
 				padding-top:95px;
 				margin-bottom:60px;
-				-webkit-animation-duration: 10s;
-				animation-duration: 10s;
+				-webkit-animation-duration: 20ms;
+				animation-duration: 20ms;
 				-webkit-animation-fill-mode: both;
 				animation-fill-mode: both;
 		 }
+
 .card {
-		animation-duration: 1s;
-		transition-timing-function: ease-in-out;
-		transition: all linear 2s !important;
 		flex-grow: 0;
 		flex-shrink: 3;
 		justify-content: center;
@@ -64,6 +56,7 @@
 }
 
 .card-header {
+	padding: 5px!important;
     position: relative;
     width: 100%;
     flex-grow: 0;
@@ -74,10 +67,6 @@
 }
 
 .tile {
-    animation-duration: 1s;
-    transition-timing-function: ease-in-out;
-    animation-delay: .5s;
-    transition: height linear 5s;
     flex-shrink: 0;
 		overflow: hidden;
 		margin: 10px;
