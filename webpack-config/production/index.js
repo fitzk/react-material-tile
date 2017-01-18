@@ -4,8 +4,10 @@ import _loaders from "./loaders"
 import _externals from "./externals"
 
 export default (paths) => {
+
 	const loaders = _loaders(paths);
-	const externals = _externals();
+	const externals = _externals(); // external libraries and frameworks excluded from build
+
 	return {
 		entry: {
 			'react-tilecard': './lib/source/index.js',
@@ -20,11 +22,10 @@ export default (paths) => {
 			libraryTarget: 'umd',
 			library: 'ReactTileCard'
 		},
-
 		plugins: [
 			new UglifyJsPlugin({
 				include: /\.min\.js$/,
-				minimize: false,
+				minimize: true,
 				compress: {
 					warnings: false
 				}
