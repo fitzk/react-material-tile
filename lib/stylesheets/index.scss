@@ -1,8 +1,10 @@
 .grid {
 	display: flex;
 	align-self: center;
-	flex-grow: 0;
-	flex-wrap: wrap-reverse;
+	flex: {
+		grow: 0;
+		wrap: wrap-reverse;
+	}
 	justify-content: center !important;
 	word-wrap: break-word;
 	& .tile {
@@ -28,23 +30,14 @@
  		100% {opacity: 0;}
   }
 
- .fadeIn {
+.fade-in {
 		-webkit-animation-name: fadeIn;
 		animation-name: fadeIn;
  }
- .fadeOut {
+ .fade-out {
 	 -webkit-animation-name: fadeOut;
 	 animation-name: fadeOut;
  }
- .animated:active {
-				padding-top:95px;
-				margin-bottom:60px;
-				-webkit-animation-duration: 20ms;
-				animation-duration: 20ms;
-				-webkit-animation-fill-mode: both;
-				animation-fill-mode: both;
-		 }
-
 .card {
 		flex-grow: 0;
 		flex-shrink: 3;
@@ -53,18 +46,18 @@
 		min-width: 20vw !important;
 		margin: auto;
 		margin-bottom: 200px;
+
+		.card-header {
+			padding: 5px!important;
+		    position: relative;
+		    width: 100%;
+		    flex-grow: 0;
+		    & div span {
+		        margin-top: 8px;
+		    }
+		}
 }
 
-.card-header {
-	padding: 5px!important;
-    position: relative;
-    width: 100%;
-    flex-grow: 0;
-    & div span {
-        margin-top: 8px;
-    }
-
-}
 
 .tile {
     flex-shrink: 0;
@@ -75,12 +68,11 @@
     & div div {
         padding: 0 !important;
     }
-}
-
-.tile-header {
-    overflow: hidden;
-    padding: 0 !important;
-    & div {
-        visibility: collapse;
-    }
+		.tile-header {
+		    overflow: hidden;
+		    padding: 0 !important;
+		    & div {
+		        visibility: collapse;
+		    }
+		}
 }
