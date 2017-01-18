@@ -15,6 +15,12 @@ export default (paths) => ({
 	performance: {
 		hints: false
 	},
+	devServer: {
+		stats: {
+			warnings: false
+		},
+		historyApiFallback: true
+	},
 	plugins: [
 		new NamedModulesPlugin(),
 		new DashboardPlugin(),
