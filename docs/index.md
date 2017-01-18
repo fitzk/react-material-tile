@@ -13,7 +13,7 @@ Check out the [demo](https://fitzk.github.io/react-tilecard/example).
 ![Tile Card Wire Frame](assets/1-tile-card.png)
 
 ## Organize content by image or logo.
-_supports images and svg
+
 ![Row](assets/2-tile-row.png)
 
 ## Click on a Tile, and a Material UI Card appears in its place.
