@@ -3,13 +3,32 @@ html, body {
   padding: 0;
   font-size: 1.3rem; }
 
-.my-card {
-  width: 60vw !important;
-  padding: 10px !important; }
-  .my-card * {
-    font-size: 1.3rem; }
-  .my-card .my-header div span {
-    font-size: 1.5rem !important; }
+.page-header {
+  font-family: Roboto, sans-serif;
+  font-size: 2rem;
+  margin-left: 10vw; }
 
-img:hover {
+.open-card {
+  order: 1;
+  margin-top: 10vh;
+  width: 80vw !important;
+  padding: 10px !important;
+  font-size: 1rem; }
+  .open-card .open-card-header div span {
+    font-size: 1.5rem !important;
+    margin-top: 8px; }
+
+.code-example {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  overflow-x: auto;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: white !important;
+  color: black;
+  border-radius: 5px; }
+
+.tile img:hover {
   opacity: .7; }
