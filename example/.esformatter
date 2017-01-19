@@ -6,7 +6,10 @@
     "maxAttrsOnTag": 1,
     "firstAttributeOnSameLine": true,
     "alignWithFirstAttribute": true,
-    "spaceInJSXExpressionContainers": " "
+    "spaceInJSXExpressionContainers": " ",
+    "htmlOptions": {
+    "end_with_newline": true
+    }
     },
     "indent": {
       "value": "\t",
@@ -16,7 +19,7 @@
     },
     "lineBreak": {
       "before": {
-        "FunctionDeclaration": "0",
+        "FunctionDeclaration": "1",
         "FunctionDeclarationOpeningBrace": 1,
         "FunctionDeclarationClosingBrace": 1
       },

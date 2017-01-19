@@ -9,78 +9,64 @@ import { TileCardGrid } from "react-tilecard"
 import { SDKDetail } from "./sdk-detail"
 
 export const SDKS = props => {
+
 	const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
 	let gridWidth = "60vw"
 	let wrap = "wrap"
+
 	if (isMobile) {
-		gridWidth="90vw"
+		gridWidth = "100vw"
 		wrap = "wrap-reverse"
+
 	}
 
-	return <Paper zDepth={ 0 }
-               style={ { width: "100vw", minHeight: "100vh", padding: "15px" } }>
-
-          <h1 className="page-header">Faux SDKs</h1>
-          <h5 style={ { marginLeft: "10vw" } }>fake devkit's for a fake service...</h5>
-
-          <div style={ { display: "flex", flexDirection: "column", alignItems: "flex-start" } }>
-
-            <TileCardGrid direction="row"
-                          wrap={wrap}
-                          width={gridWidth}
-													height="auto">
-
-              <SDKDetail title="Python SDK"
-                         avatarSrc={ python }
-                         name="python">
-                Install the command line tool ...
-                <div className="code-example">
-									<code>
-                		<pre>  pip install fauxsdk </pre>
-									</code>
-                </div>
-              </SDKDetail>
-
-              <SDKDetail title="Java SDK"
-                         avatarSrc={ java }
-                         name="java">
-                Add the following to your maven dependencies...
-                <div className="code-example">
-									<code>
-											<pre>	&lt;dependency&gt;</pre>
-											<pre>  	&lt;groupId&gt;com.faux.sdk.java&lt;&#47;groupId&gt;</pre>
-											<pre>			&lt;artifactId&gt;fauxsdkjava&lt;&#47;artifactId&gt;</pre>
-											<pre>			&lt;version&gt;0.0&lt;&#47;version&gt;</pre>
-											<pre> &lt;&#47;dependency&gt;</pre>
-                  </code>
-                </div>
-              </SDKDetail>
-
-              <SDKDetail title="JavaScript SDK"
-                         avatarSrc={ js }
-                         name="javascript">
-												 Install the command line tool ...
-				                 <div className="code-example">
-													 <code>
-				                  <pre> npm install fauxsdk </pre>
-													</code>
-				                 </div>
-              </SDKDetail>
-
-              <SDKDetail title="Android SDK"
-                         avatarSrc={ android }
-                         name="android">
-												 Add the following to your build.gradle file...
-								<div className="code-example">
-									<code>
-										<pre>	dependencies 	&#123; </pre>
-										<pre>	    compile group 'com.faux.sdk', name: "faux.sdk.android", version:'0.0'</pre>
-										<pre>	&#125; </pre>
-									</code>
-								</div>
-              </SDKDetail>
-
-            </TileCardGrid>
-          </div>
-        </Paper>
+	return (<div className={ isMobile ? "mobile" : "standard" }>
+           <Paper zDepth={ 0 }
+                  className="paper">
+             <h1 className="page-header">Faux SDKs</h1>
+             <h5 className="tag-line">fake devkit's for a fake service...</h5>
+             <Paper zDepth={ 0 }
+                    style={ { display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" } }>
+               <TileCardGrid direction="row"
+                             wrap={ wrap }
+                             width={ gridWidth }
+                             height="auto">
+                 <SDKDetail title="Python SDK"
+                            avatarSrc={ python }
+                            name="python">
+                   Install the command line tool ...
+                   <div className="code-example">
+                     <pre><code>pip install fauxsdk</code></pre>
+                   </div>
+                 </SDKDetail>
+                 <SDKDetail title="JavaScript SDK"
+                            avatarSrc={ js }
+                            name="javascript">
+                   Install the command line tool ...
+                   <div className="code-example">
+                     <pre><code>npm install fauxsdk</code></pre>
+                   </div>
+                 </SDKDetail>
+                 <SDKDetail title="Android SDK"
+                            avatarSrc={ android }
+                            name="android">
+                   <p>
+                     Add the following to your build.gradle file...
+                   </p>
+                   <div className="code-example">
+                     <pre><code>{ `dependencies \{\n\tcompile group "com.faux.sdk", name: "faux.sdk.android", version:"0.0"\n\}` }</code></pre>
+                   </div>
+                 </SDKDetail>
+                 <SDKDetail title="Java SDK"
+                            avatarSrc={ java }
+                            name="java">
+                   Add the following to your maven dependencies...
+                   <div className="code-example">
+                     <pre><code>{ `<dependency>\n\t<groupId> com.faux.sdk.java </groupId>\n\t<artifactId> fauxsdkjava </artifactId>\n\t<version> 0.0 </version>\n</dependency>` }</code></pre>
+                   </div>
+                 </SDKDetail>
+               </TileCardGrid>
+             </Paper>
+           </Paper>
+         </div>)
 }
