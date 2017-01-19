@@ -4,7 +4,6 @@ import AppContainer from "react-hot-loader";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TileCard, { TileCardGrid } from "react-tilecard"
 
 
 export class App extends Component {
