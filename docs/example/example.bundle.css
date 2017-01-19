@@ -5,23 +5,25 @@ html, body {
   overflow: auto;
   padding: 0;
   position: fixed;
-  width: 100vw; }
+  width: 100vw;
+  overflow-x: hidden; }
 
 .header {
-  width: 60vw; }
+  width: auto;
+  margin-left: 6em;
+  margin-bottom: 6em; }
 
 .mobile .page-header {
   color: white;
   font-size: 10rem;
   margin: 0;
-  margin-left: .25em;
-  margin-top: .25em;
   padding: 0; }
 
 .mobile .tag-line {
+  margin-left: .2em;
+  margin-top: .5em;
   color: white;
-  font-size: 4rem;
-  margin-left: .5em; }
+  font-size: 4rem; }
 
 .mobile .paper {
   display: flex;
@@ -29,12 +31,14 @@ html, body {
   align-items: center;
   margin: 0 !important;
   margin-top: 0 !important;
-  padding: 1em;
+  padding: 2em;
+  padding-top: 2.5em;
   width: 100vw; }
 
 .mobile .open-card {
   order: 1;
-  width: 100vw !important; }
+  width: 98vw !important;
+  margin-bottom: 100px !important; }
   .mobile .open-card p {
     font-size: 3rem; }
 
@@ -46,6 +50,11 @@ html, body {
 
 .mobile div span {
   margin-top: 8px; }
+
+.mobile .tile {
+  margin: 1.5em !important; }
+  .mobile .tile img:hover {
+    opacity: .7; }
 
 .standard {
   display: flex;
