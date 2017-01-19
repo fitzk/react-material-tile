@@ -42,7 +42,7 @@ html, body {
     }
 	}
 	code {
-		font-size: 2.5rem;
+		font-size: 24px;
 	}
 	.open-card-header {
 		* {
@@ -90,11 +90,7 @@ html, body {
 	}
 }
 .code-example {
-	border-radius: 5px;
 	color: black;
-	margin-top: 5px;
-	overflow-x: auto;
-	padding: 5px;
 }
 .tile {
 	img:hover {
