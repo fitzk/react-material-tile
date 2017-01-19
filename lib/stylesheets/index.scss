@@ -1,6 +1,6 @@
 .grid {
-	display: flex;
 	align-self: center;
+	display: flex;
 	flex: {
 		grow: 0;
 		wrap: wrap-reverse;
@@ -11,68 +11,68 @@
 		margin: 1px;
 	}
 }
-
 .row {
-		flex-direction: row;
+	flex-direction: row;
 }
-
 .column {
 	flex-direction: column;
 }
-
 @keyframes fadeIn {
-		0% {opacity: 0;}
-		100% {opacity: 1;}
- }
-
- @keyframes fadeOut{
- 		0% {opacity: 1;}
- 		100% {opacity: 0;}
-  }
-
-.fade-in {
-		-webkit-animation-name: fadeIn;
-		animation-name: fadeIn;
- }
- .fade-out {
-	 -webkit-animation-name: fadeOut;
-	 animation-name: fadeOut;
- }
-.card {
-		flex-grow: 1;
-		flex-shrink: 3;
-		justify-content: center;
-		align-self: center;
-		min-width: 20vw !important;
-		margin: auto;
-		margin-bottom: 200px;
-
-		.card-header {
-			padding: 5px!important;
-			position: relative;
-			width: 100%;
-			flex-grow: 1;
-			& div span {
-				margin-top: 8px;
-			}
-		}
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-
-
-.tile {
-    flex-shrink: 0;
-		overflow: hidden;
-		margin: 10px;
-    border: black 1px solid !important;
-    order: -5 !important;
-    & div div {
-        padding: 0 !important;
-    }
-		.tile-header {
-		    overflow: hidden;
-		    padding: 0 !important;
-		    & div {
-		        visibility: collapse;
-		    }
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fade-in {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.fade-out {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+.card {
+	align-self: center;
+	flex-grow: 1;
+	flex-shrink: 3;
+	justify-content: center;
+	margin: auto;
+	margin-bottom: 200px;
+	min-width: 20vw !important;
+	.card-header {
+		flex-grow: 1;
+		padding: 5px !important;
+		position: relative;
+		width: 100%;
+		& div span {
+			margin-top: 8px;
 		}
+	}
+}
+.tile {
+	border: black 1px solid !important;
+	flex-shrink: 0;
+	margin: 10px;
+	order: -5 !important;
+	overflow: hidden;
+	& div div {
+		padding: 0 !important;
+	}
+	.tile-header {
+		overflow: hidden;
+		padding: 0 !important;
+		& div {
+			visibility: collapse;
+		}
+	}
 }
