@@ -1,31 +1,63 @@
 html, body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: fixed;
+  background-color: #303030; }
 
-.page-header {
-  margin-left: 10vw; }
+.mobile .page-header {
+  font-size: 10rem;
+  margin: 0;
+  padding: 0;
+  margin-left: .25em;
+  margin-top: .25em; }
 
-.open-card {
+.mobile .tag-line {
+  font-size: 4rem;
+  margin-left: .5em; }
+
+.mobile .paper {
+  margin-top: 0 !important;
+  width: 105vw !important;
+  margin: 0 !important;
+  padding: 1em; }
+
+.mobile .open-card {
+  order: 1;
+  width: 100vw !important; }
+  .mobile .open-card * {
+    font-size: 3rem; }
+  .mobile .open-card code {
+    font-size: 2.5rem; }
+  .mobile .open-card .open-card-header * {
+    font-size: 5rem !important; }
+  .mobile .open-card .open-card-header div span {
+    margin-top: 8px; }
+
+.standard .paper {
+  padding: 1em;
+  margin-top: 1em;
+  width: 80vw; }
+
+.standard .page-header {
+  margin-left: .25em; }
+
+.standard .tag-line {
+  margin-left: .5em; }
+
+.standard .open-card {
   order: 1;
   margin-top: 10vh;
   width: 80vw !important;
   padding: 10px !important; }
-  .open-card .open-card-header div span {
-    margin-top: 8px; }
-
-.mobile-open-card {
-  order: 1;
-  margin-top: 10vh;
-  width: 90vw !important;
-  padding: 10px !important; }
-  .mobile-open-card .open-card-header div span {
+  .standard .open-card .open-card-header div span {
     margin-top: 8px; }
 
 .code-example {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  flex-grow: 3;
   overflow-x: auto;
   margin-top: 5px;
   padding: 5px;
