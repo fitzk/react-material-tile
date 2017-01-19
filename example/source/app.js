@@ -9,11 +9,15 @@ import { SDKS } from "./sdks"
 export class App extends Component {
 
 	render() {
+
+		const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+
 		const muiTheme = getMuiTheme(darkBaseTheme);
 		return <div>
            <MuiThemeProvider muiTheme={ muiTheme }>
              <div>
-               <AppBar/>
+               <AppBar showMenuIconButton={ false }
+                       style={ { backgroundColor: "black", marginBottom: "8em", height: isMobile ? "10em" : "auto" } } />
                <SDKS/>
              </div>
            </MuiThemeProvider>

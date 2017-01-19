@@ -5,10 +5,10 @@ import TileCard from "react-tilecard"
 export const SDKDetail = props => {
 	const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
 
-	let square = "200px"
+	let square = "150px"
 	let smallSquare = "40px"
 	if (isMobile) {
-		square = "390px"
+		square = "350px"
 		smallSquare = "80px"
 	}
 
@@ -16,7 +16,7 @@ export const SDKDetail = props => {
                   title={ props.title }
                   initiallyExpanded={ false }
                   avatarSrc={ props.avatarSrc }
-                  backgroundColor="lightblue"
+                  backgroundColor="#F3E5F5"
                   tileWidth={ square }
                   tileHeight={ square }
                   avatarWidth={ smallSquare }
