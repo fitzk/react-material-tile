@@ -9,24 +9,38 @@ import { TileCardGrid } from "react-tilecard"
 import { SDKDetail } from "./sdk-detail"
 
 export const SDKS = props => {
+	const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+	let gridWidth = "60vw"
+	let wrap = "wrap"
+	if (isMobile) {
+		gridWidth="90vw"
+		wrap = "wrap-reverse"
+	}
 
 	return <Paper zDepth={ 0 }
                style={ { width: "100vw", minHeight: "100vh", padding: "15px" } }>
-          <h2 className="page-header">Faux SDKs</h2>
+
+          <h1 className="page-header">Faux SDKs</h1>
           <h5 style={ { marginLeft: "10vw" } }>fake devkit's for a fake service...</h5>
+
           <div style={ { display: "flex", flexDirection: "column", alignItems: "flex-start" } }>
+
             <TileCardGrid direction="row"
-                          wrap="wrap"
-                          width="80vw"
+                          wrap={wrap}
+                          width={gridWidth}
 													height="auto">
+
               <SDKDetail title="Python SDK"
                          avatarSrc={ python }
                          name="python">
                 Install the command line tool ...
                 <div className="code-example">
-                <pre>  pip install fauxsdk </pre>
+									<code>
+                		<pre>  pip install fauxsdk </pre>
+									</code>
                 </div>
               </SDKDetail>
+
               <SDKDetail title="Java SDK"
                          avatarSrc={ java }
                          name="java">
@@ -41,26 +55,31 @@ export const SDKS = props => {
                   </code>
                 </div>
               </SDKDetail>
+
               <SDKDetail title="JavaScript SDK"
                          avatarSrc={ js }
                          name="javascript">
 												 Install the command line tool ...
 				                 <div className="code-example">
+													 <code>
 				                  <pre> npm install fauxsdk </pre>
+													</code>
 				                 </div>
               </SDKDetail>
+
               <SDKDetail title="Android SDK"
                          avatarSrc={ android }
-                         name="android" >
+                         name="android">
 												 Add the following to your build.gradle file...
-													 <div className="code-example">
-														<code>
-														<pre>	dependencies 	&#123; </pre>
-														<pre>	    compile group 'com.faux.sdk', name: "faux.sdk.android", version:'0.0'</pre>
-														<pre>	&#125; </pre>
-													</code>
-												</div>
+								<div className="code-example">
+									<code>
+										<pre>	dependencies 	&#123; </pre>
+										<pre>	    compile group 'com.faux.sdk', name: "faux.sdk.android", version:'0.0'</pre>
+										<pre>	&#125; </pre>
+									</code>
+								</div>
               </SDKDetail>
+
             </TileCardGrid>
           </div>
         </Paper>

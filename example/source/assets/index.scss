@@ -1,14 +1,9 @@
-html, body{
+html, body {
   margin: 0;
   padding: 0;
-  font-size: 1.3rem;
 }
 
 .page-header {
-  font: {
-    family: Roboto, sans-serif;
-  size: 2rem;
-}
   margin-left: 10vw;
 }
 
@@ -17,24 +12,35 @@ html, body{
   margin-top: 10vh;
   width: 80vw!important;
   padding: 10px!important;
-  font-size: 1rem;
+
   .open-card-header div span  {
-    font-size: 1.5rem!important;
     margin: {
       top: 8px;
     }
   }
 }
 
+
+.mobile-open-card {
+  order: 1;
+  margin-top: 10vh;
+  width: 90vw!important;
+  padding: 10px!important;
+
+  .open-card-header div span  {
+    margin: {
+      top: 8px;
+    }
+  }
+}
 .code-example {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   flex-grow: 3;
   overflow-x: auto;
   margin-top: 5px;
   padding: 5px;
-  background-color: white!important;
   color: black;
   border-radius: 5px;
 }
