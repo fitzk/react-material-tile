@@ -23,58 +23,57 @@ export const SDKS = props => {
 	}
 
 	return (<div className={ isMobile ? "mobile" : "standard" }>
-           <Paper zDepth={ 0 }
-                  className="paper">
+           <div className="header">
              <h1 className="page-header">Faux SDKs</h1>
              <h5 className="tag-line">fake devkits for a fake service...</h5>
-             <Paper zDepth={ 0 }
-                    style={ { display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" } }>
-               <TileCardGrid direction="row"
-                             wrap={ wrap }
-                             width={ gridWidth }
-                             height="auto">
-                 <SDKDetail title="Python SDK"
-                            avatarSrc={ python }
-                            name="python">
-                   <p>
-                     Install the command line tool ...
-                   </p>
-                   <div className="code-example">
-                     <pre><code>pip install fauxsdk</code></pre>
-                   </div>
-                 </SDKDetail>
-                 <SDKDetail title="JavaScript SDK"
-                            avatarSrc={ js }
-                            name="javascript">
-                   <p>
-                     Install the command line tool ...
-                   </p>
-                   <div className="code-example">
-                     <pre><code>npm install fauxsdk</code></pre>
-                   </div>
-                 </SDKDetail>
-                 <SDKDetail title="Android SDK"
-                            avatarSrc={ android }
-                            name="android">
-                   <p>
-                     Add the following to your build.gradle file...
-                   </p>
-                   <div className="code-example">
-                     <pre><code>{ `dependencies \{\n\tcompile group "com.faux.sdk", sname: "faux.sdk.android", version:"0.0"\n\}` }</code></pre>
-                   </div>
-                 </SDKDetail>
-                 <SDKDetail title="Java SDK"
-                            avatarSrc={ java }
-                            name="java">
-                   <p>
-                     Add the following to your maven dependencies...
-                   </p>
-                   <div className="code-example">
-                     <pre><code>{ `<dependency>\n\t<groupId> com.faux.sdk.java </groupId>\n\t<artifactId> fauxsdkjava </artifactId>\n\t<version> 0.0 </version>\n</dependency>` }</code></pre>
-                   </div>
-                 </SDKDetail>
-               </TileCardGrid>
-             </Paper>
+           </div>
+           <Paper zDepth={ 0 }
+                  className="paper">
+             <TileCardGrid direction="row"
+                           wrap={ wrap }
+                           width={ gridWidth }
+                           height="auto">
+               <SDKDetail title="Python SDK"
+                          avatarSrc={ python }
+                          name="python">
+                 <p>
+                   Install the command line tool ...
+                 </p>
+                 <div className="code-example">
+                   <pre><code>pip install fauxsdk</code></pre>
+                 </div>
+               </SDKDetail>
+               <SDKDetail title="JavaScript SDK"
+                          avatarSrc={ js }
+                          name="javascript">
+                 <p>
+                   Install the command line tool ...
+                 </p>
+                 <div className="code-example">
+                   <pre><code>npm install fauxsdk</code></pre>
+                 </div>
+               </SDKDetail>
+               <SDKDetail title="Android SDK"
+                          avatarSrc={ android }
+                          name="android">
+                 <p>
+                   Add the following to your build.gradle file...
+                 </p>
+                 <div className="code-example">
+                   <pre><code>{ `dependencies \{\n\tcompile group "com.faux.sdk", sname: "faux.sdk.android", version:"0.0"\n\}` }</code></pre>
+                 </div>
+               </SDKDetail>
+               <SDKDetail title="Java SDK"
+                          avatarSrc={ java }
+                          name="java">
+                 <p>
+                   Add the following to your maven dependencies...
+                 </p>
+                 <div className="code-example">
+                   <pre><code>{ `<dependency>\n\t<groupId> com.faux.sdk.java </groupId>\n\t<artifactId> fauxsdkjava </artifactId>\n\t<version> 0.0 </version>\n</dependency>` }</code></pre>
+                 </div>
+               </SDKDetail>
+             </TileCardGrid>
            </Paper>
          </div>)
 }

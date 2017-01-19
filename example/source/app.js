@@ -10,7 +10,7 @@ export class App extends Component {
 
 	render() {
 		const muiTheme = getMuiTheme(darkBaseTheme);
-		return <div className="container">
+		return <div>
            <MuiThemeProvider muiTheme={ muiTheme }>
              <div>
                <AppBar/>

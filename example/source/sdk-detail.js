@@ -16,6 +16,7 @@ export const SDKDetail = props => {
                   title={ props.title }
                   initiallyExpanded={ false }
                   avatarSrc={ props.avatarSrc }
+                  backgroundColor="lightblue"
                   tileWidth={ square }
                   tileHeight={ square }
                   avatarWidth={ smallSquare }

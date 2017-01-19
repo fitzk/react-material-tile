@@ -5,10 +5,15 @@ html, body {
 	overflow: auto;
 	padding: 0;
 	position: fixed;
-	width: 100%;
+	width: 100vw;
+}
+.header {
+  width:60vw;
 }
 .mobile {
+
 	.page-header {
+    color: white;
 		font-size: 10rem;
 		margin: 0;
 		margin-left: .25em;
@@ -16,14 +21,18 @@ html, body {
 		padding: 0;
 	}
 	.tag-line {
+    color: white;
 		font-size: 4rem;
 		margin-left: .5em;
 	}
 	.paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 		margin: 0!important;
 		margin-top: 0!important;
 		padding: 1em;
-		width: 105vw!important;
+		width: 100vw;
 	}
 	.open-card {
 		order: 1;
@@ -47,15 +56,22 @@ html, body {
 	}
 }
 .standard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 	.paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 		margin-top: 1em;
 		padding: 1em;
-		width: 80vw;
 	}
 	.page-header {
+    color: white;
 		margin-left: .25em;
 	}
 	.tag-line {
+    color: white;
 		margin-left: .5em;
 	}
 	.open-card {
@@ -64,6 +80,9 @@ html, body {
 		padding: 10px!important;
 		width: 80vw!important;
 		.open-card-header div span {
+
+  			font-size: 2rem!important;
+
 			margin: {
 				top: 8px;
 			}
@@ -81,10 +100,4 @@ html, body {
 	img:hover {
 		opacity: .7;
 	}
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0!important;
 }
