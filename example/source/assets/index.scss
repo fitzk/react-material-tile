@@ -1,97 +1,84 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-
-  position: fixed;
-  background-color: rgb(48, 48, 48);
+	background-color: rgb(48, 48, 48);
+	height: 100%;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	position: fixed;
+	width: 100%;
 }
-
-
-
 .mobile {
-
-  .page-header {
-    font-size: 10rem;
-    margin: 0;
-    padding: 0;
-    margin-left: .25em;
-    margin-top: .25em;
-  }
-  .tag-line{
-    font-size: 4rem;
-    margin-left: .5em;
-  }
-  .paper {
-    margin-top: 0!important;
-    width: 105vw!important;
-    margin: 0!important;
-    padding: 1em;
-    }
-  .open-card {
-    order: 1;
-    width:100vw!important;
-    * {
-      font-size: 3rem;
-    }
-    code {
-      font-size: 2.5rem;
-
-    }
-
-    .open-card-header {
-      * {
-        font-size: 5rem!important;
-      }
-      div span  {
-      margin: {
-        top: 8px;
-      }
-    }
-  }
-  }
+	.page-header {
+		font-size: 10rem;
+		margin: 0;
+		margin-left: .25em;
+		margin-top: .25em;
+		padding: 0;
+	}
+	.tag-line {
+		font-size: 4rem;
+		margin-left: .5em;
+	}
+	.paper {
+		margin: 0!important;
+		margin-top: 0!important;
+		padding: 1em;
+		width: 105vw!important;
+	}
+	.open-card {
+		order: 1;
+		width: 100vw!important;
+		* {
+			font-size: 3rem;
+		}
+	}
+	code {
+		font-size: 2.5rem;
+	}
+	.open-card-header {
+		* {
+			font-size: 5rem!important;
+		}
+	}
+	div span {
+		margin: {
+			top: 8px;
+		}
+	}
 }
 .standard {
-.paper {
-  padding: 1em;
-  margin-top: 1em;
-  width: 80vw;
+	.paper {
+		margin-top: 1em;
+		padding: 1em;
+		width: 80vw;
+	}
+	.page-header {
+		margin-left: .25em;
+	}
+	.tag-line {
+		margin-left: .5em;
+	}
+	.open-card {
+		margin-top: 10vh;
+		order: 1;
+		padding: 10px!important;
+		width: 80vw!important;
+		.open-card-header div span {
+			margin: {
+				top: 8px;
+			}
+		}
+	}
 }
-.page-header {
-  margin-left: .25em;
-}
-.tag-line{
-  margin-left: .5em;
-}
-.open-card {
-  order: 1;
-  margin-top: 10vh;
-  width: 80vw!important;
-  padding: 10px!important;
-
-  .open-card-header div span  {
-    margin: {
-      top: 8px;
-    }
-  }
-}
-
-}
-
 .code-example {
-  display: flex;
-  flex-direction: column;
-  overflow-x: auto;
-  margin-top: 5px;
-  padding: 5px;
-  color: black;
-  border-radius: 5px;
+	border-radius: 5px;
+	color: black;
+	margin-top: 5px;
+	overflow-x: auto;
+	padding: 5px;
 }
-
 .tile {
-  img:hover {
-    opacity: .7;
-  }
+	img:hover {
+		opacity: .7;
+	}
 }
