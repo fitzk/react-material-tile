@@ -8,6 +8,7 @@ import { App } from "./app"
 injectTapEventPlugin()
 
 const renderApp = () => {
+	// if using react-router replace with <Routes/>
 	render(<AppContainer>
           <App/>
         </AppContainer>, document.getElementById("app"));
@@ -16,5 +17,6 @@ const renderApp = () => {
 renderApp() // Renders App on init
 
 if (module.hot) {
+	// if using react-router replace with "./routes"
 	module.hot.accept("./app", renderApp)
 }

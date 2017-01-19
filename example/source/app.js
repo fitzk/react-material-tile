@@ -1,18 +1,18 @@
-import React, { Component, PropTypes } from "react";
-import { Card, CardText, Paper, CardTitle, AppBar } from "material-ui";
-import AppContainer from "react-hot-loader";
+import React from "react";
+import { AppBar } from "material-ui";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import "./assets/index.scss"
 import { SDKS } from "./sdks"
 
 export class App extends Component {
 
 	render() {
 		const muiTheme = getMuiTheme(darkBaseTheme);
-		return <div>
+		return <div className="container">
            <MuiThemeProvider muiTheme={ muiTheme }>
-             <div style={ { display: "flex", flexDirection: "column", alignItems: "center", margin: "0!important" } }>
+             <div>
                <AppBar/>
                <SDKS/>
              </div>
