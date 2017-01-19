@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { AppBar } from "material-ui";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
