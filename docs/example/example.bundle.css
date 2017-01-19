@@ -73,11 +73,7 @@ html, body {
       margin-top: 8px; }
 
 .code-example {
-  border-radius: 5px;
-  color: black;
-  margin-top: 5px;
-  overflow-x: auto;
-  padding: 5px; }
+  color: black; }
 
 .tile img:hover {
   opacity: .7; }
