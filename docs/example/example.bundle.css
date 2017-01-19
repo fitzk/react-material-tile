@@ -43,7 +43,7 @@ html, body {
     font-size: 3rem; }
 
 .mobile code {
-  font-size: 24px; }
+  font-size: 24px !important; }
 
 .mobile .open-card-header * {
   font-size: 5rem !important; }
