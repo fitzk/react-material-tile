@@ -1,26 +1,25 @@
-var webpack = require('webpack');
-var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+import { optimize } from "webpack"
 import _loaders from "./loaders"
 import _externals from "./externals"
 
 export default (paths) => {
-
+	const UglifyJsPlugin = optimize.UglifyJsPlugin;
 	const loaders = _loaders(paths);
 	const externals = _externals(); // external libraries and frameworks excluded from build
 
 	return {
 		entry: {
-			'react-tilecard': './lib/source/index.js',
-			'react-tilecard.min': './lib/source/index.js'
+			"react-tilecard": "./lib/source/index.js",
+			"react-tilecard.min": "./lib/source/index.js"
 		},
 		externals: externals,
 		output: {
-			filename: '[name].js',
-			chunkFilename: '[id].chunk.js',
-			path: 'distribution',
-			publicPath: '/',
-			libraryTarget: 'umd',
-			library: 'ReactTileCard'
+			filename: "[name].js",
+			chunkFilename: "[id].chunk.js",
+			path: "distribution",
+			publicPath: "/",
+			libraryTarget: "umd",
+			library: "ReactTileCard"
 		},
 		plugins: [
 			new UglifyJsPlugin({

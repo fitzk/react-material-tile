@@ -1,14 +1,3 @@
-/**
-* @Author: Kayla Fitzsimmons <fitzk>
-* @Date:   01-09-2017
-* @Email:  kayla.fitzsimmons@protonmail.com
-* @Project: tilecard
-* @Filename: paths.js
-* @Last modified by:   kaylafitzsimmons
-* @Last modified time: 01-19-2017
-* @License: MIT
-* @Copyright: 2016-present
-*/
 import path from "path"
 
 export default (dirname) => ({

@@ -1,6 +1,6 @@
-import merge from 'webpack-merge'
+import merge from "webpack-merge"
 import getPaths from "./webpack-config/utils/get-paths"
-import { createVariants } from 'parallel-webpack'
+import { createVariants } from "parallel-webpack"
 
 import _common from "./webpack-config/common"
 import _production from "./webpack-config/production"
@@ -13,10 +13,10 @@ const production = _production(paths)
 const development = _development(paths)
 
 export default (env) => {
-	if (env === 'production') {
+	if (env === "production") {
 		return merge(common, production)
 	}
-	if (env === 'development') {
+	if (env === "development") {
 		return merge(common, development)
 	}
 }
