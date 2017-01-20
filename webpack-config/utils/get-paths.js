@@ -4,15 +4,15 @@
 * @Email:  kayla.fitzsimmons@protonmail.com
 * @Project: tilecard
 * @Filename: paths.js
-* @Last modified by:   fitzk
-* @Last modified time: 01-09-2017
+* @Last modified by:   kaylafitzsimmons
+* @Last modified time: 01-19-2017
 * @License: MIT
 * @Copyright: 2016-present
 */
 import path from "path"
 
 export default (dirname) => ({
-	entry: path.resolve(dirname, lib / index.js),
+	entry: path.resolve(dirname, "lib/index.js"),
 	lib: path.resolve(dirname, "lib"),
 	node_modules: path.resolve(dirname, "node_modules"),
 	stylesheets: path.resolve(dirname, "lib/source/stylesheets"),
