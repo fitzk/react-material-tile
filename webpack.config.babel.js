@@ -4,6 +4,7 @@ import { createVariants } from 'parallel-webpack'
 
 import _common from "./webpack-config/common"
 import _production from "./webpack-config/production"
+import _development from "./webpack-config/development"
 
 const target = process.env.npm_lifecycle_event
 const paths = getPaths(__dirname)
