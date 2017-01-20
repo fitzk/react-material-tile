@@ -2,7 +2,7 @@ import ExtractTextPlugin from "extract-text-webpack-plugin"
 
 export default (paths) => {
 	const extractSCSS = new ExtractTextPlugin({
-		filename: '[name].scss',
+		filename: "[name].scss",
 		allChunks: true
 	});
 	return {
@@ -31,13 +31,13 @@ export default (paths) => {
 					loader: extractSCSS.extract({
 						loader: [
 							{
-								loader: 'css-loader',
+								loader: "css-loader",
 								options: {
 									modules: true
 								}
 							},
 							{
-								loader: 'sass'
+								loader: "sass"
 							}
 						],
 						defaultLoader: "style-loader"

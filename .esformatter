@@ -1,5 +1,12 @@
 {
-  "plugins":["esformatter-jsx"],
+  "plugins":[
+  "esformatter-jsx",
+  "esformatter-quotes"
+],
+"quotes": {
+"type": "double",
+"avoidEscape": false
+},
   "jsx": {
     "formatJSX": true,
     "attrsOnSameLineAsTag": false,

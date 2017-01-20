@@ -10,13 +10,13 @@ export default (paths) => {
 				"webpack-dev-server/client?http://localhost:8080",
 				paths.entry
 			],
-			vendor: ['react', 'react-dom', 'material-ui', 'styled-components']
+			vendor: ["react", "react-dom", "material-ui", "styled-components"]
 		},
 		output: {
 			path: paths.distribution,
 			filename: "[name].bundle.js"
 		},
-		devtool: 'eval-source-map',
+		devtool: "eval-source-map",
 		performance: {
 			hints: false
 		},
