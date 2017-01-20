@@ -8,7 +8,7 @@ export const SDKDetail = props => {
 	let square = "150px"
 	let smallSquare = "40px"
 	if (isMobile) {
-		square = "350px"
+		square = "360px"
 		smallSquare = "80px"
 	}
 

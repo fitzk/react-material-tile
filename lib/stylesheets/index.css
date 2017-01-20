@@ -1,0 +1,48 @@
+.grid {
+	padding: 10px;
+	transition: none;
+	display: flex;
+	align-self: center;
+	flex-grow: 0;
+	word-wrap: break-word;
+}
+.row { flex-direction: row; }
+
+.column { flex-direction: column; }
+.alignCenter { align-items: center; }
+
+.card {
+	align-self: center;
+	flex-grow: 1;
+	flex-shrink: 3;
+	justify-content: center;
+	margin: auto;
+	margin-bottom: 200px;
+	min-width: 20vw !important;
+}
+.card-header {
+	flex-grow: 1;
+	padding: 5px !important;
+	position: relative;
+	width: 100%;
+	& div span {
+		margin-top: 8px;
+	}
+}
+.tile {
+	border: black 1px solid !important;
+	flex-shrink: 0;
+	margin: 10px;
+	order: -5 !important;
+	overflow: hidden;
+	& div div {
+		padding: 0 !important;
+	}
+}
+.tileHeader {
+	overflow: hidden;
+	padding: 0 !important;
+	& div {
+		visibility: collapse;
+	}
+}
