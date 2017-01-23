@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "ava": "^0.17.0",
-    "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
@@ -30,17 +29,16 @@
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-es2015-native-modules": "^6.9.4",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-1": "^6.16.0",
-    "classnames": "^2.2.5",
     "clean-webpack-plugin": "^0.1.15",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
     "esformatter": "^0.10.0",
     "esformatter-flow": "^1.0.1",
     "esformatter-jsx": "^7.4.1",
+    "esformatter-quotes": "^1.1.0",
     "eslint": "^3.13.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.5",
     "friendly-errors-webpack-plugin": "^1.1.2",
@@ -54,8 +52,9 @@
     "simple-assign": "^0.1.0",
     "style-loader": "^0.13.1",
     "styled-components": "^1.3.1",
-    "webpack": "^2.1.0-beta.25",
+    "webpack": "^2.2.0",
     "webpack-dashboard": "^0.2.1",
+    "webpack-dev-server": "^2.2.0",
     "webpack-merge": "^2.3.1",
     "webpack-node-externals": "^1.5.4"
   },
@@ -63,13 +62,17 @@
     "symlink": "npm link && cd ./../example && npm link react-tilecard",
     "test": "./node_modules/.bin/ava ./test/index.js",
     "build": "./node_modules/.bin/webpack --env production --optimize-minimize --config ./webpack.config.babel.js",
-    "docs:example": "rm ./docs/example/* && cp ./example/distribution/* ./docs/example"
+    "dev": "./node_modules/.bin/webpack-dev-server --env development --config ./webpack.config.babel.js",
+    "docs": "rm ./docs/example/* && cp ./example/distribution/* ./docs/example",
+    "publish:example": "cd example && npm run build:example && cd .. && npm run docs && git add ./docs/example && git commit -m 'publish example' && git push origin master"
   },
   "dependencies": {
     "material-ui": "^0.16.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.1",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-hot-loader": "^3.0.0-beta.4",
+    "react-tap-event-plugin": "^2.0.1",
+    "styled-components": "^1.3.1"
   }
 }

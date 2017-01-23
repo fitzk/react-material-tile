@@ -12,19 +12,14 @@ import { SDKDetail } from "./sdk-detail"
 
 export const SDKS = props => {
 
-	const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
-	let gridWidth = "60vw"
-	let wrap = "wrap"
+	const mobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+	let gridWidth = mobile ? "auto" : "60vw"
+	let wrap = mobile ? "wrap-reverse" : "wrap"
+	let justification = mobile ? "center" : "space-around"
 
-	if (isMobile) {
-		gridWidth = "100vw"
-		wrap = "wrap-reverse"
-
-	}
-
-	return (<div className={ isMobile ? "mobile" : "standard" }>
+	return (<div className={ mobile ? "mobile" : "standard" }>
            <div className="header">
-             <h1 className="page-header">Faux SDKs</h1>
+             <h1 className="page-header">FAUX SDKs</h1>
              <h5 className="tag-line">fake devkits for a fake service...</h5>
            </div>
            <Paper zDepth={ 0 }
@@ -32,6 +27,8 @@ export const SDKS = props => {
              <TileCardGrid direction="row"
                            wrap={ wrap }
                            width={ gridWidth }
+                           alignment="center"
+                           justification={ justification }
                            height="auto">
                <SDKDetail title="Python SDK"
                           avatarSrc={ python }
@@ -60,7 +57,7 @@ export const SDKS = props => {
                    Add the following to your build.gradle file...
                  </p>
                  <div className="code-example">
-                   <pre><code>{ `dependencies \{\n\tcompile group "com.faux.sdk", sname: "faux.sdk.android", version:"0.0"\n\}` }</code></pre>
+                   <pre><code>{ `dependencies \{\n  compile group "com.faux.sdk", \n  name: "faux.sdk.android", version:"0.0"\n\}` }</code></pre>
                  </div>
                </SDKDetail>
                <SDKDetail title="Java SDK"
@@ -70,7 +67,7 @@ export const SDKS = props => {
                    Add the following to your maven dependencies...
                  </p>
                  <div className="code-example">
-                   <pre><code>{ `<dependency>\n\t<groupId> com.faux.sdk.java </groupId>\n\t<artifactId> fauxsdkjava </artifactId>\n\t<version> 0.0 </version>\n</dependency>` }</code></pre>
+                   <pre><code>{ `<dependency>\n  <groupId> com.faux.sdk.java </groupId>\n  <artifactId> fauxsdkjava </artifactId>\n  <version> 0.0 </version>\n</dependency>` }</code></pre>
                  </div>
                </SDKDetail>
              </TileCardGrid>
