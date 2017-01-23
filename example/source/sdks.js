@@ -5,8 +5,6 @@ import python from "./assets/python.png"
 import java from "./assets/java.png"
 import js from "./assets/js.png"
 import android from "./assets/android.png"
-
-import "./assets/index.scss"
 import { TileCardGrid } from "react-tilecard"
 import { SDKDetail } from "./sdk-detail"
 
