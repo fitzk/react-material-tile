@@ -24,12 +24,12 @@
     "lineBreak": {
       "before": {
         "FunctionDeclaration": "0",
-        "FunctionDeclarationOpeningBrace": 1,
-        "FunctionDeclarationClosingBrace": 1
+        "FunctionDeclarationOpeningBrace": 0,
+        "FunctionDeclarationClosingBrace": 0
       },
       "after": {
-        "FunctionDeclaration": ">=1",
-        "FunctionDeclarationOpeningBrace": 1
+        "FunctionDeclaration": "0",
+        "FunctionDeclarationOpeningBrace": 0
       }
     },
     "whiteSpace": {

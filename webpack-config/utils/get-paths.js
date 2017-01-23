@@ -1,7 +1,8 @@
 import path from "path"
 
 export default (dirname) => ({
-	entry: path.resolve(dirname, "lib/index.js"),
+	example_entry: path.resolve(dirname, "example/source/index.js"),
+	example_dist: path.resolve(dirname, "docs/example"),
 	lib: path.resolve(dirname, "lib"),
 	node_modules: path.resolve(dirname, "node_modules"),
 	stylesheets: path.resolve(dirname, "lib/source/stylesheets"),

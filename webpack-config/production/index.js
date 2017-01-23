@@ -1,10 +1,8 @@
 import { optimize } from "webpack"
-import _loaders from "./loaders"
 import _externals from "./externals"
 
 export default (paths) => {
 	const UglifyJsPlugin = optimize.UglifyJsPlugin;
-	const loaders = _loaders(paths);
 	const externals = _externals(); // external libraries and frameworks excluded from build
 
 	return {
@@ -29,9 +27,6 @@ export default (paths) => {
 					warnings: false
 				}
 			})
-		],
-		module: {
-			rules: loaders
-		}
+		]
 	}
 }

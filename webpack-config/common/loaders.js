@@ -1,4 +1,4 @@
-export default (paths) => {
+export default (paths, extractSCSS) => {
 	return [
 		{
 			test: /\.(js|jsx)$/,
@@ -17,14 +17,32 @@ export default (paths) => {
 						],
 						"react",
 						"stage-1"
-					],
-					plugins: [
-						"add-module-exports"
 					]
 				}
 			},
 			exclude: paths.node_modules,
 			include: paths.source
+		},
+		{
+			test: /\.(css|scss)$/,
+			loader: extractSCSS.extract({
+				loader: [
+					{
+						loader: "css-loader",
+						options: {
+							modules: true
+						}
+					},
+					{
+						loader: "sass"
+					}
+				],
+				defaultLoader: "style-loader"
+			})
+		},
+		{
+			test: /\.(png|jpg|jpeg)$/,
+			use: ["file-loader"]
 		}
 	]
 }
