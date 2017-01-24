@@ -7,3 +7,6 @@ lib
 webpack-config
 test
 node_modules
+lib/source/index.js
+lib/source/app.js
+lib/source/template.ejs

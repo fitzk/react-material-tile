@@ -1,7 +1,8 @@
 {
   "plugins":[
   "esformatter-jsx",
-  "esformatter-quotes"
+  "esformatter-quotes",
+  "esformatter-curly"
 ],
 "quotes": {
 "type": "double",
