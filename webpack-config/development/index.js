@@ -1,16 +1,23 @@
 import { NamedModulesPlugin } from "webpack"
 import { _HtmlWebpackPluginConfig } from "./plugins"
+
 export default (paths) => {
+
 	const _HtmlWebpackPlugin = _HtmlWebpackPluginConfig(`${paths.lib}/template.ejs`)
+
 	return {
 		entry: {
 			main: [
 				"babel-polyfill",
 				"react-hot-loader/patch",
 				"webpack-dev-server/client?http://localhost:8080",
-				paths.example_entry
+				paths.entry
 			],
 			vendor: ["react", "react-dom", "material-ui", "styled-components"]
+		},
+		output: {
+			path: paths.devBuild,
+			filename: "[name].bundle.js"
 		},
 		devtool: "eval-source-map",
 		performance: {

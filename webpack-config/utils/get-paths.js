@@ -1,9 +1,9 @@
 import path from "path"
 
 export default (dirname) => ({
-	example_entry: path.resolve(dirname, "example/source/index.js"),
-	example_dist: path.resolve(dirname, "docs/example"),
+	entry: path.resolve(dirname, "lib/index.js"),
 	lib: path.resolve(dirname, "lib"),
+	devBuild: path.resolve(dirname, "lib/source/build"),
 	node_modules: path.resolve(dirname, "node_modules"),
 	stylesheets: path.resolve(dirname, "lib/source/stylesheets"),
 	distribution: path.resolve(dirname, "distribution"),
