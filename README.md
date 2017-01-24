@@ -2,3 +2,6 @@
 
 
 ### usage
+```
+<TileCard src={ image.png } title="React Tile Card"/>
+```
