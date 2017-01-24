@@ -3,9 +3,8 @@ import { AppBar } from "material-ui";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import { TileCard } from "./source/tile-card"
 import { ThemeProvider } from "styled-components"
-import { SDKS } from "./sdks"
+import { Docs } from "./sdks"
 
 export class App extends Component {
 
@@ -18,11 +17,8 @@ export class App extends Component {
            <MuiThemeProvider muiTheme={ muiTheme }>
              <ThemeProvider theme={ darkBaseTheme }>
                <div>
-                 <AppBar showMenuIconButton={ false }
-                         title="FAUX"
-                         titleStyle={ { color: "white", fontSize: isMobile ? "8rem" : "auto", marginTop: ".5em" } }
-                         style={ { backgroundColor: "black", marginBottom: "8em", height: isMobile ? "10em" : "auto" } } />
-                 <SDKS/>
+                 <AppBar showMenuIconButton={ false } title="react tile card" titleStyle={ { color: "white", fontSize: isMobile ? "8rem" : "auto", marginTop: ".5em" } } style={ { backgroundColor: "black", marginBottom: "8em", height: isMobile ? "10em" : "auto" } } />
+                 <Docs/>
                </div>
              </ThemeProvider>
            </MuiThemeProvider>
