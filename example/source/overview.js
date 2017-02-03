@@ -17,15 +17,15 @@ width: 70vw
 `
 export const Overview = props => {
 	return <Container>
-          <h1> React Tile Card </h1>
+          <h1>React Tilecard </h1>
           <p>A customizable Tile Component that transforms into a Material UI Card on click.</p>
           <TileCard title="Basic Usage" src={ tile } tileWidth="200px">
             <div className="container">
               <pre>
-                      <Code>
-                      { `<TileCard src={tile} width="200px>\n  <p> content </p>\n</TileCard>` }
-                      </Code>
-                      </pre>
+                                      <Code>
+                                      { `<TileCard src={tile} width="200px>\n  <p> content </p>\n</TileCard>` }
+                                      </Code>
+                                      </pre>
             </div>
           </TileCard>
         </Container>
