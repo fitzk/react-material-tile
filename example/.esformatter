@@ -10,8 +10,8 @@
 },
   "jsx": {
     "formatJSX": true,
-    "attrsOnSameLineAsTag": true,
-    "maxAttrsOnTag": 4,
+    "attrsOnSameLineAsTag":false,
+    "maxAttrsOnTag": 1,
     "firstAttributeOnSameLine": true,
     "alignWithFirstAttribute": true,
     "spaceInJSXExpressionContainers": " "

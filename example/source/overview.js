@@ -9,25 +9,18 @@ import ReactTooltip from "react-tooltip"
 
 
 const Code = styled.code`
-color: black
-width: 40vw
+	background-color: white;
+	color: black;
+	width: 40vw;
 `
 const Container = styled.div`
-width: 70vw
+width: 70vw;
 `
 export const Overview = props => {
 	return <Container>
           <h1>React Tilecard </h1>
           <p>A customizable Tile Component that transforms into a Material UI Card on click.</p>
-          <TileCard title="Basic Usage" src={ tile } tileWidth="200px">
-            <div className="container">
-              <pre>
-                                      <Code>
-                                      { `<TileCard src={tile} width="200px>\n  <p> content </p>\n</TileCard>` }
-                                      </Code>
-                                      </pre>
-            </div>
-          </TileCard>
+          { props.children }
         </Container>
 
 }

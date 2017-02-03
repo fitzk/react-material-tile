@@ -31,13 +31,13 @@ export default (paths, extractSCSS) => {
 			loader: extractSCSS.extract({
 				loader: [
 					{
-						loader: 'css-loader',
+						loader: "css-loader",
 						options: {
 							modules: true
 						}
 					},
 					{
-						loader: 'sass-loader'
+						loader: "sass-loader"
 					}
 				],
 				defaultLoader: "style-loader"

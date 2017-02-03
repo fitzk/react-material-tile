@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { AppBar } from "material-ui";
+import { AppBar, CardText } from "material-ui";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { ThemeProvider } from "styled-components"
-import { Docs } from "./sdks"
+import TileCard, { TileCardGrid } from "react-tilecard"
+import logo from "./assets/js-yellow.png"
 
 export class App extends Component {
 
@@ -16,10 +17,17 @@ export class App extends Component {
 		return <div>
            <MuiThemeProvider muiTheme={ muiTheme }>
              <ThemeProvider theme={ darkBaseTheme }>
-               <div>
-                 <AppBar showMenuIconButton={ false } title="react tile card" titleStyle={ { color: "white", fontSize: isMobile ? "8rem" : "auto", marginTop: ".5em" } } style={ { backgroundColor: "black", marginBottom: "8em", height: isMobile ? "10em" : "auto" } } />
-                 <Docs/>
-               </div>
+               <TileCardGrid>
+                 <TileCard tileWidth="150px"
+                           tileHeight="150px"
+                           title="React Tile"
+                           subtitle="this is a subtitle"
+                           src={ logo }>
+                   <CardText>
+                     React Tile!
+                   </CardText>
+                 </TileCard>
+               </TileCardGrid>
              </ThemeProvider>
            </MuiThemeProvider>
          </div>
