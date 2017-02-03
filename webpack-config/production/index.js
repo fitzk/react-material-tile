@@ -7,8 +7,8 @@ export default (paths) => {
 
 	return {
 		entry: {
-			"react-tilecard": "./lib/source/index.js",
-			"react-tilecard.min": "./lib/source/index.js"
+			"react-tile": "./lib/source/index.js",
+			"react-tile.min": "./lib/source/index.js"
 		},
 		externals: externals,
 		output: {
