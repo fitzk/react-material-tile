@@ -3,7 +3,7 @@ import { _HtmlWebpackPluginConfig } from "./plugins"
 
 export default (paths) => {
 
-	const _HtmlWebpackPlugin = _HtmlWebpackPluginConfig(`${paths.lib}/template.ejs`)
+	const _HtmlWebpackPlugin = _HtmlWebpackPluginConfig(`${paths.lib}/dev/template.ejs`)
 
 	return {
 		entry: {
