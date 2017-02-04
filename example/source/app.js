@@ -1,33 +1,73 @@
-import React, { Component } from "react";
-import { AppBar, CardText } from "material-ui";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-import darkBaseTheme from "material-ui/styles/baseThemes/darkBaseTheme";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import React, { Component } from "react"
+import { AppBar, CardText, List, ListItem, CardActions, FlatButton } from "material-ui"
+import getMuiTheme from "material-ui/styles/getMuiTheme"
+import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme"
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"
 import { ThemeProvider } from "styled-components"
-import TileCard, { TileCardGrid } from "react-tilecard"
+import MaterialTile, { MaterialTileGrid } from "react-material-tile"
 import logo from "./assets/js-yellow.png"
 
 export class App extends Component {
 
 	render() {
 
-		const isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
-
-		const muiTheme = getMuiTheme(darkBaseTheme);
+		const muiTheme = getMuiTheme(lightBaseTheme);
 		return <div>
            <MuiThemeProvider muiTheme={ muiTheme }>
-             <ThemeProvider theme={ darkBaseTheme }>
-               <TileCardGrid>
-                 <TileCard tileWidth="150px"
-                           tileHeight="150px"
-                           title="React Tile"
-                           subtitle="this is a subtitle"
-                           src={ logo }>
-                   <CardText>
-                     React Tile!
-                   </CardText>
-                 </TileCard>
-               </TileCardGrid>
+             <ThemeProvider theme={ lightBaseTheme }>
+               <MaterialTileGrid row>
+                 <MaterialTileGrid column>
+                   <MaterialTile tileWidth="150px"
+                                 tileHeight="150px"
+                                 title="Card zDepth 0!"
+                                 cardHeight="90vh"
+                                 subtitle="this is a subtitle"
+                                 zDepth={ 0 }
+                                 src={ logo }>
+                     <MaterialTileGrid column>
+                       <MaterialTile tileWidth="150px"
+                                     tileHeight="150px"
+                                     noImageInHeader
+                                     title="Nested Card zDepth 0!"
+                                     cardHeight="250px"
+                                     subtitle="this is a subtitle"
+                                     zDepth={ 0 }
+                                     src={ logo }>
+                         <CardActions>
+                           <FlatButton label="Action1" />
+                           <FlatButton label="Action2" />
+                         </CardActions>
+                       </MaterialTile>
+                       <MaterialTile tileWidth="150px"
+                                     tileHeight="150px"
+                                     noImageInHeader
+                                     title="Nested Card zDepth 2!"
+                                     cardHeight="250px"
+                                     cardWidth="400px"
+                                     subtitle="this is a subtitle"
+                                     zDepth={ 2 }
+                                     src={ logo }>
+                         <CardText>
+                           some content...
+                         </CardText>
+                       </MaterialTile>
+                     </MaterialTileGrid>
+                   </MaterialTile>
+                   <MaterialTile tileWidth="150px"
+                                 tileHeight="150px"
+                                 title="No image in header"
+                                 noImageInHeader
+                                 src={ logo }>
+                     <CardText></CardText>
+                   </MaterialTile>
+                   <MaterialTile tileWidth="150px"
+                                 tileHeight="150px"
+                                 title="Test"
+                                 src={ logo }>
+                     <CardText></CardText>
+                   </MaterialTile>
+                 </MaterialTileGrid>
+               </MaterialTileGrid>
              </ThemeProvider>
            </MuiThemeProvider>
          </div>
