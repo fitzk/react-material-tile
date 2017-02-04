@@ -1,17 +1,19 @@
-# React Tile Card
+# Material Tile
 
 
 ### Usage
 ```
-<TileCard src={ image.png } title="React Tile Card">
+<MaterialTile src={ image.png } title="React Tile Card">
 	<CardText>
 	 Content here.
 	</CardText>
-</TileCard>
+</MaterialTile>
 ```
 ### Options
 children
-React components, props are passed to children from TileCard
+child components components, props are passed to children from MaterialTile
+
+customCard
 
 avatar
 optional, a custom avatar to use in the header

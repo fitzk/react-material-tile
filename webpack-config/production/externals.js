@@ -42,6 +42,20 @@ const materialUIExternal = {
 	amd: "material-ui"
 };
 
+const styledComponentsExternal = {
+	root: "StyledComponents",
+	commonjs2: "styled-components",
+	commonjs: "styled-components",
+	amd: "styled-components"
+};
+
+const reactResponsiveExternal = {
+	root: "ReactResponsive",
+	commonjs2: "react-responsive",
+	commonjs: "react-responsive",
+	amd: "react-responsive"
+};
+
 export default () => ({
 	"react": reactExternal,
 	"react-addons-transition-group": reactAddonsTransitionGroupExternal,
@@ -51,5 +65,7 @@ export default () => ({
 	"react-addons-create-fragment": "var React.addons.createFragment",
 	"react-addons-update": "var React.addons.update",
 	"react-router": reactRouterExternal,
+	"styled-components": styledComponentsExternal,
+	"react-responsive": reactResponsiveExternal,
 	"material-ui": materialUIExternal
 })

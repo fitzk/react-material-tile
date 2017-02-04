@@ -25,7 +25,7 @@ export default (paths, extractSCSS) => {
 		},
 		{
 			test: /\.(css|scss)$/,
-			loader: extractSCSS.extract({
+			use: extractSCSS.extract({
 				loader: [
 					{
 						loader: "css-loader",
@@ -34,10 +34,10 @@ export default (paths, extractSCSS) => {
 						}
 					},
 					{
-						loader: "sass"
+						loader: "sass-loader"
 					}
 				],
-				defaultLoader: "style-loader"
+				fallbackLoader: "style-loader"
 			})
 		},
 		{
