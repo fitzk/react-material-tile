@@ -1,6 +1,6 @@
 {
   "name": "react-material-tile",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A react component that transforms from a custom 'tile' to a Material UI Card",
   "author": "Kayla Fitzsimmons <kayla.fitzsimmons@protonmail.com>",
   "repository": "https://github.com/fitzk/react-tile",
@@ -16,7 +16,6 @@
   "peerDependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "material-ui": "^0.16.4",
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
@@ -28,6 +27,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-polyfill": "^6.20.0",
+    "babel-preset-env": "^1.1.8",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
@@ -78,7 +78,7 @@
     "symlink": "npm link && cd ./../example && npm link react-tilecard",
     "test": "./node_modules/.bin/ava ./lib/test/index.js",
     "build": "./node_modules/.bin/webpack --env production --optimize-minimize --config ./webpack.config.babel.js",
-    "dev": "./node_modules/.bin/webpack-dev-server --env development --config ./webpack.config.babel.js",
+    "dev": "cd example && ./node_modules/.bin/webpack-dev-server --env development --config ./webpack.config.babel.js",
     "docs": "rm ./docs/example/* && cp ./example/distribution/* ./docs/example",
     "publish:example": "cd example && npm run build && cd .. && npm run docs && git add ./docs/example && git commit -m 'publish example' && git push origin master"
   }
