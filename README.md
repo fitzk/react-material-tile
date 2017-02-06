@@ -6,7 +6,10 @@ React Material Tile components were created to make Material Grid layouts easier
 These components were designed for use with [React Material UI](https://github.com/callemall/material-ui),
 but they also work well by themselves with a few adjustments.
 
-
+### NPM
+```
+npm install --save react-material-tile
+```
 ### Components
 
 #### MaterialTile
