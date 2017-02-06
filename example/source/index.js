@@ -1,10 +1,16 @@
 import React, { Component } from "react"
+import injectTapEventPlugin from "react-tap-event-plugin"
 import { AppContainer } from "react-hot-loader"
 import { render } from "react-dom"
-import injectTapEventPlugin from "react-tap-event-plugin"
 import { App } from "./app"
-import "./index.scss"
+import { injectGlobal } from "styled-components"
 
+injectGlobal`
+	body {
+		width: 100vw;
+		height: 100vh;
+	}
+`
 injectTapEventPlugin()
 
 const renderApp = () => {

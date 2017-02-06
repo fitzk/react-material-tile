@@ -11,20 +11,12 @@ export class App extends Component {
 
 	render() {
 
-		const muiTheme = getMuiTheme(lightBaseTheme);
 		return <div>
-           <MuiThemeProvider muiTheme={ muiTheme }>
+           <MuiThemeProvider muiTheme={ getMuiTheme(lightBaseTheme) }>
              <ThemeProvider theme={ lightBaseTheme }>
                <MaterialTileGrid row>
                  <MaterialTileGrid column>
-                   <MaterialTile tileWidth="150px"
-                                 tileHeight="150px"
-                                 title="Card zDepth 0!"
-                                 cardHeight="90vh"
-                                 subtitle="this is a subtitle"
-                                 zDepth={ 0 }
-                                 src={ logo }>
-                     <MaterialTileGrid column>
+
                        <MaterialTile tileWidth="150px"
                                      tileHeight="150px"
                                      noImageInHeader
@@ -52,7 +44,6 @@ export class App extends Component {
                          </CardText>
                        </MaterialTile>
                      </MaterialTileGrid>
-                   </MaterialTile>
                    <MaterialTile tileWidth="150px"
                                  tileHeight="150px"
                                  title="No image in header"
@@ -66,7 +57,6 @@ export class App extends Component {
                                  src={ logo }>
                      <CardText></CardText>
                    </MaterialTile>
-                 </MaterialTileGrid>
                </MaterialTileGrid>
              </ThemeProvider>
            </MuiThemeProvider>
