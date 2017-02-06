@@ -28,12 +28,14 @@ export default () => ({
 			"react-addons-transition-group",
 			"react-dom",
 			"react-responsive",
+			"react-router",
+			"react-material-tile",
 			"react-tap-event-plugin",
 			"styled-components"
 		]
 	},
 	output: {
-		path: path.join(__dirname, "public"),
+		path: path.join(__dirname, "distribution"),
 		filename: "[name].bundle.js"
 	},
 	devtool: "eval-source-map",
@@ -53,7 +55,10 @@ export default () => ({
 	],
 	resolve: {
 		alias: {
-			src: PATHS.src
+			src: PATHS.src,
+			images: path.join(PATHS.src, "/assets/images"),
+			components: path.join(PATHS.src, "components"),
+			utils: path.join(PATHS.src, "utils")
 		},
 		extensions: [
 			"*",
