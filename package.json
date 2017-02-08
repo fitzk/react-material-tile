@@ -1,6 +1,6 @@
 {
   "name": "react-material-tile",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A react component that transforms from a custom 'tile' to a Material UI Card",
   "author": "Kayla Fitzsimmons <kayla.fitzsimmons@protonmail.com>",
   "repository": "https://github.com/fitzk/react-tile",
@@ -9,7 +9,11 @@
     "require": [
       "babel-register"
     ],
-    "babel": "inherit"
+    "babel": {
+      "babelrc": false,
+      "presets": [ "latest", "react" ],
+      "plugins": [ "transform-object-rest-spread" ]
+    }
   },
   "main": "./distribution/react-material-tile.js",
   "module": "./source/index.js",
@@ -19,21 +23,18 @@
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
-    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-env": "^1.1.8",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-1": "^6.16.0",
-    "clean-webpack-plugin": "^0.1.15",
-    "css-loader": "^0.26.1",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
     "enzyme": "^2.7.0",
     "esformatter": "^0.10.0",
     "esformatter-curly": "0.0.2",
@@ -41,23 +42,14 @@
     "esformatter-ignore": "^0.1.3",
     "esformatter-jsx": "^7.4.1",
     "esformatter-quotes": "^1.1.0",
-    "eslint": "^3.13.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.5",
-    "file-loader": "^0.9.0",
-    "friendly-errors-webpack-plugin": "^1.1.2",
-    "html-webpack-plugin": "^2.26.0",
     "jsdom": "^9.9.1",
     "jsdom-global": "^2.1.1",
     "jsx-test-helpers": "^1.1.0",
-    "node-sass": "^4.1.1",
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.4",
     "react-router": "^3.0.1",
-    "sass-loader": "^4.1.1",
-    "simple-assign": "^0.1.0",
-    "style-loader": "^0.13.1",
     "styled-components": "^1.3.1",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0",
@@ -72,12 +64,14 @@
     "react-responsive": "^1.2.6",
     "react-router": "^3.0.2",
     "react-tap-event-plugin": "^2.0.1",
-    "styled-components": "^1.3.1"
+    "styled-components": "^1.3.1",
+    "styled-flex": "latest"
   },
   "scripts": {
-    "symlink": "npm link && cd ./../example && npm link react-tilecard",
-    "test": "./node_modules/.bin/ava ./lib/test/index.js",
-    "build": "./node_modules/.bin/webpack --env production --optimize-minimize --config ./webpack.config.babel.js",
+    "build-test": "./node_modules/.bin/webpack  --env=ava --config ./webpack.config.babel.js",
+    "test-ava": "./node_modules/.bin/ava ./test/test-*.js",
+    "test": "npm run build-test && npm run test-ava",
+    "build": "./node_modules/.bin/webpack  --env=production --config ./webpack.config.babel.js",
     "dev": "cd example && ./node_modules/.bin/webpack-dev-server --env development --config ./webpack.config.babel.js",
     "docs": "rm ./docs/example/* && cp ./example/distribution/* ./docs/example",
     "publish:example": "cd example && npm run build && cd .. && npm run docs && git add ./docs/example && git commit -m 'publish example' && git push origin master"
