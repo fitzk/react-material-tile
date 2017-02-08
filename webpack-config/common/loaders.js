@@ -1,4 +1,4 @@
-export default (paths, extractSCSS) => {
+export default (paths) => {
 	return [
 		{
 			test: /\.(js|jsx)$/,
@@ -8,41 +8,15 @@ export default (paths, extractSCSS) => {
 					babelrc: false,
 					cacheDirectory: false,
 					presets: [
-						[
-							"es2015",
-							{
-								loose: true,
-								modules: false
-							}
-						],
+						[ "env", { modules: false } ],
 						"react",
-						"stage-1"
+						"stage-1",
+						"stage-2"
 					]
 				}
 			},
 			exclude: paths.node_modules,
 			include: paths.source
-		},
-		{
-			test: /\.(css|scss)$/,
-			use: extractSCSS.extract({
-				loader: [
-					{
-						loader: "css-loader",
-						options: {
-							modules: true
-						}
-					},
-					{
-						loader: "sass-loader"
-					}
-				],
-				fallbackLoader: "style-loader"
-			})
-		},
-		{
-			test: /\.(png|jpg|jpeg)$/,
-			use: ["file-loader"]
 		}
 	]
 }

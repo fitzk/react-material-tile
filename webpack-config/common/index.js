@@ -1,12 +1,7 @@
-import ExtractTextPlugin from "extract-text-webpack-plugin"
 import _loaders from "./loaders"
 
 export default (paths) => {
-	const extractSCSS = new ExtractTextPlugin({
-		filename: "[name].scss",
-		allChunks: true
-	});
-	const loaders = _loaders(paths, extractSCSS)
+	const loaders = _loaders(paths)
 	return {
 		resolve: {
 			extensions: [
@@ -21,7 +16,6 @@ export default (paths) => {
 				".svg"
 			],
 		},
-		plugins: [extractSCSS],
 		module: {
 			rules: loaders
 		},

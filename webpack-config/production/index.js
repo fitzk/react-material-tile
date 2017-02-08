@@ -7,8 +7,7 @@ export default (paths) => {
 
 	return {
 		entry: {
-			"react-material-tile": "./lib/source/index.js",
-			"react-material-tile.min": "./lib/source/index.js"
+			"react-material-tile": "./lib/source/index.js"
 		},
 		externals: externals,
 		output: {
@@ -21,7 +20,7 @@ export default (paths) => {
 		},
 		plugins: [
 			new UglifyJsPlugin({
-				include: /\.min\.js$/,
+				include: /\.js$/,
 				minimize: true,
 				compress: {
 					warnings: false

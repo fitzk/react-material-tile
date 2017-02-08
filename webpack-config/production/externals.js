@@ -42,10 +42,11 @@ const materialUIExternal = {
 	amd: "material-ui"
 };
 
+
 const styledComponentsExternal = {
-	root: "StyledComponents",
-	commonjs2: "styled-components",
-	commonjs: "styled-components",
+	root: "styled",
+	commonjs2: "styled-components/lib/index.js",
+	commonjs: "styled-components/lib/index.js",
 	amd: "styled-components"
 };
 
@@ -55,6 +56,7 @@ const reactResponsiveExternal = {
 	commonjs: "react-responsive",
 	amd: "react-responsive"
 };
+
 
 export default () => ({
 	"react": reactExternal,
