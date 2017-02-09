@@ -104,7 +104,9 @@ export class App extends Component {
 }	     
 ```
 ### Use without React Material UI
-🚧 documentation: in progress
+🚧 documentation: in progress  
 To use MaterialTile components without React Material UI, you would
 just need to supply your own custom Card to MaterialTile or MaterialTileFunctional.
 
+### Live Example
+[kfitzi.io](https://kfitzi.io/projects)
