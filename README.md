@@ -1,6 +1,6 @@
 ## React Material Tile
 
-This project is a work in progress, components are subject to change. 
+🚧 This project is a work in progress, components are subject to change. 
 
 React Material Tile components were created to make Material Grid layouts easier. 
 These components were designed for use with [React Material UI](https://github.com/callemall/material-ui),
@@ -68,15 +68,15 @@ It takes all of the same props as Material Tile with the addition of the followi
 ```
 import { MaterialTileGrid } from "react-material-tile"
 ```
-This component is in progress. 
+🚧 This component is in progress. 
 
 | prop name       | type | optional/required | description  |
 | :-------------: |:---------:| :--------:|:-------------------|
 | row | boolean | optional | specify if cards should be organized in a row, column is default |
-| in progress |
+🚧 documentation: in progress
 
 #### MaterialTileRouted
-This component is in progress and is not currently distributed as part of this package. Allows you to use your uri to determine open / closed state of tiles. It checks the 
+🚧 This component is in progress and is not currently distributed as part of this package. Allows you to use your uri to determine open / closed state of tiles. It checks the 
 url for a component's name and wheither or not it is active, it also works with nested tiles.
 
 
@@ -101,11 +101,10 @@ export class App extends Component {
 		     </ThemeProvider>	     
 		   </MuiThemeProvider>
        }
-}
-	     
+}	     
 ```
 ### Use without React Material UI
-
+🚧 documentation: in progress
 To use MaterialTile components without React Material UI, you would
 just need to supply your own custom Card to MaterialTile or MaterialTileFunctional.
 
