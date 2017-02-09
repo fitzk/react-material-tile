@@ -1,7 +1,4 @@
-import _loaders from "./loaders"
-
 export default (paths) => {
-	const loaders = _loaders(paths)
 	return {
 		resolve: {
 			extensions: [
@@ -15,9 +12,6 @@ export default (paths) => {
 				".jpg",
 				".svg"
 			],
-		},
-		module: {
-			rules: loaders
 		},
 		node: {
 			fs: "empty"

@@ -1,9 +1,16 @@
-import _externals from "./../production"
+import _loaders from "./../parts/loaders"
+
+
 export default (paths) => {
-	let externals = _externals
+	let noflow = true, file = true, json = true
+	const loaders = _loaders(paths)
+
 	return {
 		entry: {
 			"card": paths.lib + "/source/material-tile/card/index.js"
+		},
+		module: {
+			rules: loaders
 		},
 		externals: {
 		  'cheerio': 'window',

@@ -1,12 +1,12 @@
 const reactExternal = {
-	root: "React",
+	root: "React", // global
 	commonjs2: "react",
 	commonjs: "react",
 	amd: "react"
 };
 
 const reactDOMExternal = {
-	root: "ReactDOM",
+	root: "ReactDOM", // global
 	commonjs2: "react-dom",
 	commonjs: "react-dom",
 	amd: "react-dom"
@@ -19,7 +19,6 @@ const reactAddonsTransitionGroupExternal = {
 	amd: "react-addons-transition-group",
 }
 
-
 const reactAddonsTransitionGroupFragmentExternal = {
 	root: ["React", "addons", "createFragment"],
 	commonjs2: "react-addons-create-fragment",
@@ -27,47 +26,31 @@ const reactAddonsTransitionGroupFragmentExternal = {
 	amd: "react-addons-create-fragment",
 }
 
-const reactRouterExternal = {
-	root: "ReactRouter",
-	commonjs2: "react-router",
-	commonjs: "react-router",
-	amd: "react-router"
-};
-
-
 const materialUIExternal = {
-	root: "MaterialUI",
 	commonjs2: "material-ui",
 	commonjs: "material-ui",
 	amd: "material-ui"
 };
 
-
 const styledComponentsExternal = {
-	root: "styled",
+	commonjs: "styled-components",
 	commonjs2: "styled-components/lib/index.js",
-	commonjs: "styled-components/lib/index.js",
 	amd: "styled-components"
 };
 
 const reactResponsiveExternal = {
-	root: "ReactResponsive",
-	commonjs2: "react-responsive",
 	commonjs: "react-responsive",
+	commonjs2: "react-responsive",
 	amd: "react-responsive"
 };
-
 
 export default () => ({
 	"react": reactExternal,
 	"react-addons-transition-group": reactAddonsTransitionGroupExternal,
 	"react-addons-create-fragment": reactAddonsTransitionGroupFragmentExternal,
-	"react-addons-transition-group": "var React.addons.TransitionGroup",
 	"react-addons-pure-render-mixin": "var React.addons.PureRenderMixin",
-	"react-addons-create-fragment": "var React.addons.createFragment",
 	"react-addons-update": "var React.addons.update",
-	"react-router": reactRouterExternal,
 	"styled-components": styledComponentsExternal,
 	"react-responsive": reactResponsiveExternal,
 	"material-ui": materialUIExternal
-})
+});
