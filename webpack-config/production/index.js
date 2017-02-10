@@ -22,6 +22,7 @@ export default (paths) => {
 		module: {
 			rules: loaders
 		},
+		devtool: "eval-source-map",
 		externals: externals,
 		plugins: [
 			new UglifyJsPlugin({
