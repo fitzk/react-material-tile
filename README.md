@@ -7,7 +7,7 @@ These components were designed for use with [React Material UI](https://github.c
 but they also work as stand alone components.
 
 ### NPM
-```
+``` js
 npm install --save react-material-tile
 ```
 ### Components
