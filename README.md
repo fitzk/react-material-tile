@@ -1,6 +1,6 @@
 ## React Material Tile
 
-🚧 This project is a work in progress, components are subject to change.
+&#128679; This project is a work in progress, components are subject to change.
 
 React Material Tile components were created to make Material Grid layouts easier.
 These components were designed for use with [React Material UI](https://github.com/callemall/material-ui),
