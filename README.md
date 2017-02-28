@@ -61,17 +61,17 @@ Stateless Material Tile component.
 ```
 import { MaterialTileGrid } from "react-material-tile"
 ```
-🚧 This component is in progress.
+&#128679; This component is in progress.
 
 
 | prop name       | type | optional/required | description  |
 | :-------------: |:---------:| :--------:|:-------------------|
 | row | boolean | optional | specify if cards should be organized in a row, column is default |
-🚧 documentation: in progress
+&#128679; documentation: in progress
 
 #### MaterialTileRouted
 
-🚧 This component is in progress and is not currently distributed as part of this package. Allows you to use your uri to determine open / closed state of tiles. It checks the url for a component's name and whether or not it is active, it also works with nested tiles.
+&#128679; This component is in progress and is not currently distributed as part of this package. Allows you to use your uri to determine open / closed state of tiles. It checks the url for a component's name and whether or not it is active, it also works with nested tiles.
 
 
 ### Use with React Material UI or with a custom theme
@@ -98,7 +98,7 @@ export class App extends Component {
 }	     
 ```
 ### Use without React Material UI
-🚧 documentation: in progress  
+&#128679; documentation: in progress  
 To use MaterialTile components without React Material UI, you would
 just need to supply your own custom Card to MaterialTile or MaterialTileFunctional.
 
