@@ -16,7 +16,7 @@ npm install --save react-material-tile
 Displays an image, which transforms into a React Material UI card on click. Tile / card behavior is handled by default.
 
 ##### Usage
-```
+``` js
 import MaterialTile from "react-material-tile"
 ...
 
@@ -58,7 +58,7 @@ Stateless Material Tile component.
 | onClick | function | required | a function to control tile also applied to header of default Card |
 
 #### MaterialTileGrid
-```
+``` js
 import { MaterialTileGrid } from "react-material-tile"
 ```
 &#128679; This component is in progress.
@@ -79,7 +79,7 @@ Theming is optional, however, if you do decide to use a theme,
 you can pass it to all Material Tile components by using the
 ThemeProvider supplied by Styled components.
 
-```
+``` js
 import React, { Component } from "react"
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"
 import getMuiTheme from "material-ui/styles/getMuiTheme"
